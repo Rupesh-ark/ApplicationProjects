@@ -1,0 +1,12 @@
+C:\Users\Genos0\source\repos\StockExchange\StockExchange\bin\Debug\StockExchange.exe.config
+C:\Users\Genos0\source\repos\StockExchange\StockExchange\bin\Debug\StockExchange.exe
+C:\Users\Genos0\source\repos\StockExchange\StockExchange\bin\Debug\StockExchange.pdb
+C:\Users\Genos0\source\repos\StockExchange\StockExchange\obj\Debug\StockExchange.Login.resources
+C:\Users\Genos0\source\repos\StockExchange\StockExchange\obj\Debug\StockExchange.Settings.resources
+C:\Users\Genos0\source\repos\StockExchange\StockExchange\obj\Debug\StockExchange.TemplateForm.resources
+C:\Users\Genos0\source\repos\StockExchange\StockExchange\obj\Debug\StockExchange.MDI.resources
+C:\Users\Genos0\source\repos\StockExchange\StockExchange\obj\Debug\StockExchange.Properties.Resources.resources
+C:\Users\Genos0\source\repos\StockExchange\StockExchange\obj\Debug\StockExchange.csproj.GenerateResource.cache
+C:\Users\Genos0\source\repos\StockExchange\StockExchange\obj\Debug\StockExchange.csproj.CoreCompileInputs.cache
+C:\Users\Genos0\source\repos\StockExchange\StockExchange\obj\Debug\StockExchange.exe
+C:\Users\Genos0\source\repos\StockExchange\StockExchange\obj\Debug\StockExchange.pdb

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace StockExchange
 {
-    public partial class Sample : Form
+    public partial class Login : TemplateForm
     {
-        public WelcomeScreen()
+        public Login()
         {
             InitializeComponent();
         }
