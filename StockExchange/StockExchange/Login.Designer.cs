@@ -36,6 +36,7 @@ namespace StockExchange
             this.loginButton = new System.Windows.Forms.Button();
             this.leftPanel.SuspendLayout();
             this.leftPanelBottom.SuspendLayout();
+            this.leftPanelTop.SuspendLayout();
             this.rightPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -110,9 +111,11 @@ namespace StockExchange
             this.loginButton.TabIndex = 4;
             this.loginButton.Text = "Login";
             this.loginButton.UseVisualStyleBackColor = true;
+            this.loginButton.Click += new System.EventHandler(this.loginButton_Click);
             // 
             // Login
             // 
+            this.AcceptButton = this.loginButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1574, 649);
@@ -122,6 +125,7 @@ namespace StockExchange
             this.leftPanel.ResumeLayout(false);
             this.leftPanelBottom.ResumeLayout(false);
             this.leftPanelBottom.PerformLayout();
+            this.leftPanelTop.ResumeLayout(false);
             this.rightPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 

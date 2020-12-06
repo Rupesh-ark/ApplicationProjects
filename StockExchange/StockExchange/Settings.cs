@@ -13,7 +13,6 @@ namespace StockExchange
 {
     public partial class Settings : TemplateForm
     {
-        MainClass mainClassInst = new MainClass();
         public Settings()
         {
             InitializeComponent();
@@ -54,12 +53,12 @@ namespace StockExchange
                 else
                 {
                     sb.Append("Data Source=" + dataSourceText.Text + ";" + "Initial Catalog=" + databaseText.Text + ";" + "Integrated Security=true;MultipleActiveResultSets=true;");
-                    File.WriteAllText(mainClassInst.path+"\\connect", sb.ToString());
+                    File.WriteAllText(MainClass.path +"\\connect", sb.ToString());
                     DialogResult dr = MessageBox.Show("Settings Saved Sucessfully.","Sucess",MessageBoxButtons.OK,MessageBoxIcon.Information);
                     if (dr == DialogResult.OK)
                     {
                         Login log = new Login();
-                        mainClassInst.showWindow(log, this, MDI.ActiveForm);
+                        MainClass.showWindow(log, this, MDI.ActiveForm);
                     }
                 }
             }
@@ -76,12 +75,12 @@ namespace StockExchange
                 else
                 {
                     sb.Append("Data Source=" + dataSourceText.Text + ";" + "Initial Catalog=" + databaseText.Text + ";" + "User ID="+usernameText.Text+";Password="+passwordText.Text+";MultipleActiveResultSets=true;");
-                    File.WriteAllText(mainClassInst.path + "\\connect", sb.ToString());
+                    File.WriteAllText(MainClass.path + "\\connect", sb.ToString());
                     DialogResult dr = MessageBox.Show("Settings Saved Sucessfully.", "Sucess", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     if (dr == DialogResult.OK)
                     {
                         Login log = new Login();
-                        mainClassInst.showWindow(log, this, MDI.ActiveForm);
+                        MainClass.showWindow(log, this, MDI.ActiveForm);
                     }
                 }
 

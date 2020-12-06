@@ -10,3 +10,18 @@ C:\Users\Genos0\source\repos\StockExchange\StockExchange\obj\Debug\StockExchange
 C:\Users\Genos0\source\repos\StockExchange\StockExchange\obj\Debug\StockExchange.csproj.CoreCompileInputs.cache
 C:\Users\Genos0\source\repos\StockExchange\StockExchange\obj\Debug\StockExchange.exe
 C:\Users\Genos0\source\repos\StockExchange\StockExchange\obj\Debug\StockExchange.pdb
+D:\Application Projects\ApplicationProjects\StockExchange\StockExchange\bin\Debug\StockExchange.exe.config
+D:\Application Projects\ApplicationProjects\StockExchange\StockExchange\bin\Debug\StockExchange.exe
+D:\Application Projects\ApplicationProjects\StockExchange\StockExchange\bin\Debug\StockExchange.pdb
+D:\Application Projects\ApplicationProjects\StockExchange\StockExchange\obj\Debug\StockExchange.Customers.resources
+D:\Application Projects\ApplicationProjects\StockExchange\StockExchange\obj\Debug\StockExchange.HomeScreen.resources
+D:\Application Projects\ApplicationProjects\StockExchange\StockExchange\obj\Debug\StockExchange.Login.resources
+D:\Application Projects\ApplicationProjects\StockExchange\StockExchange\obj\Debug\StockExchange.Settings.resources
+D:\Application Projects\ApplicationProjects\StockExchange\StockExchange\obj\Debug\StockExchange.TemplateForm.resources
+D:\Application Projects\ApplicationProjects\StockExchange\StockExchange\obj\Debug\StockExchange.MDI.resources
+D:\Application Projects\ApplicationProjects\StockExchange\StockExchange\obj\Debug\StockExchange.Properties.Resources.resources
+D:\Application Projects\ApplicationProjects\StockExchange\StockExchange\obj\Debug\StockExchange.TemplateFormTheSecond.resources
+D:\Application Projects\ApplicationProjects\StockExchange\StockExchange\obj\Debug\StockExchange.csproj.GenerateResource.cache
+D:\Application Projects\ApplicationProjects\StockExchange\StockExchange\obj\Debug\StockExchange.csproj.CoreCompileInputs.cache
+D:\Application Projects\ApplicationProjects\StockExchange\StockExchange\obj\Debug\StockExchange.exe
+D:\Application Projects\ApplicationProjects\StockExchange\StockExchange\obj\Debug\StockExchange.pdb

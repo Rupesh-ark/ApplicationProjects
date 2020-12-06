@@ -12,7 +12,6 @@ namespace StockExchange
 {
     public partial class MDI : Form
     {
-        MainClass mainClassInst = new MainClass();
         public MDI()
         {
             InitializeComponent();
@@ -20,7 +19,7 @@ namespace StockExchange
 
         private void MDI_Load(object sender, EventArgs e)
         {
-            if(File.Exists(mainClassInst.path+"\\connect"))
+            if(File.Exists(MainClass.path +"\\connect"))
             {
                 Login loginInstance = new Login();
                 loginInstance.MdiParent = this;

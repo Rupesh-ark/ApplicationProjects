@@ -12,9 +12,17 @@ namespace StockExchange
 {
     public partial class Login : TemplateForm
     {
+        
+
         public Login()
         {
             InitializeComponent();
+        }
+
+        private void loginButton_Click(object sender, EventArgs e)
+        {
+            HomeScreen hs = new HomeScreen();
+            MainClass.showWindow(hs, this, MDI.ActiveForm);
         }
     }
 }
