@@ -150,6 +150,7 @@ namespace StockExchange
             this.companies.TabIndex = 4;
             this.companies.Text = "Companies";
             this.companies.UseVisualStyleBackColor = true;
+            this.companies.Click += new System.EventHandler(this.companies_Click);
             // 
             // exit
             // 

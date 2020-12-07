@@ -40,5 +40,11 @@ namespace StockExchange
             Transactions trans = new Transactions();
             MainClass.showWindow(trans, this, MDI.ActiveForm);
         }
+
+        private void companies_Click(object sender, EventArgs e)
+        {
+            Companies cmps = new Companies();
+            MainClass.showWindow(cmps, this, MDI.ActiveForm);
+        }
     }
 }

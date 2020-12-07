@@ -64,12 +64,14 @@
     <Compile Include="Customers.Designer.cs">
       <DependentUpon>Customers.cs</DependentUpon>
     </Compile>
+    <Compile Include="Deletion.cs" />
     <Compile Include="HomeScreen.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="HomeScreen.Designer.cs">
       <DependentUpon>HomeScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="Insertion.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +79,7 @@
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="MainClass.cs" />
+    <Compile Include="Retrival.cs" />
     <Compile Include="Settings.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,6 +118,7 @@
     <Compile Include="Transactions.Designer.cs">
       <DependentUpon>Transactions.cs</DependentUpon>
     </Compile>
+    <Compile Include="Updation.cs" />
     <EmbeddedResource Include="Broker.resx">
       <DependentUpon>Broker.cs</DependentUpon>
     </EmbeddedResource>

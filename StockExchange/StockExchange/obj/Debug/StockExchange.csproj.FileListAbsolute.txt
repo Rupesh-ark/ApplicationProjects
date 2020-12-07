@@ -25,3 +25,6 @@ D:\Application Projects\ApplicationProjects\StockExchange\StockExchange\obj\Debu
 D:\Application Projects\ApplicationProjects\StockExchange\StockExchange\obj\Debug\StockExchange.csproj.CoreCompileInputs.cache
 D:\Application Projects\ApplicationProjects\StockExchange\StockExchange\obj\Debug\StockExchange.exe
 D:\Application Projects\ApplicationProjects\StockExchange\StockExchange\obj\Debug\StockExchange.pdb
+D:\Application Projects\ApplicationProjects\StockExchange\StockExchange\obj\Debug\StockExchange.csprojAssemblyReference.cache
+D:\Application Projects\ApplicationProjects\StockExchange\StockExchange\obj\Debug\StockExchange.Broker.resources
+D:\Application Projects\ApplicationProjects\StockExchange\StockExchange\obj\Debug\StockExchange.Stocks.resources
