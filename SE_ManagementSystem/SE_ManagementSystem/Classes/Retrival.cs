@@ -27,6 +27,7 @@ namespace SE_ManagementSystem
                 customerNum.DataPropertyName = dt.Columns["customerNum"].ToString();
                 dataGridView.DataSource = dt;
 
+                CentralControl.sNoInitiator(dataGridView, "sNO");
             }
             catch(Exception ex)
             {
@@ -51,6 +52,7 @@ namespace SE_ManagementSystem
                 seName.DataPropertyName = dt.Columns["seName"].ToString();
 
                 dataGridView.DataSource = dt;
+                CentralControl.sNoInitiator(dataGridView, "sNO");
             }
             catch (Exception ex)
             {
@@ -58,6 +60,33 @@ namespace SE_ManagementSystem
                 CentralControl.ShowMSG(ex.Message, "Error");
             }
         }
+
+        public static void GetBrokers(DataGridView dataGridView, DataGridViewColumn brokerID, DataGridViewColumn brokerName, DataGridViewColumn password, DataGridViewColumn commision, DataGridViewColumn seName)
+        {
+            try
+            {
+                SqlCommand cmd = new SqlCommand("spBroker_GetAll", CentralControl.con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                brokerID.DataPropertyName = dt.Columns["brokerID"].ToString();
+                brokerName.DataPropertyName = dt.Columns["brokerName"].ToString();
+                password.DataPropertyName = dt.Columns["password"].ToString();
+                commision.DataPropertyName = dt.Columns["commision"].ToString();
+                seName.DataPropertyName = dt.Columns["seName"].ToString();
+
+                dataGridView.DataSource = dt;
+                CentralControl.sNoInitiator(dataGridView, "sNO");
+            }
+            catch (Exception ex)
+            {
+
+                CentralControl.ShowMSG(ex.Message, "Error");
+            }
+        }
+
+
         public static void LoadItems(string proc, ComboBox comboBox,string displayMember,string valueMember)
         {
             try

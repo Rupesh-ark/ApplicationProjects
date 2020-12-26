@@ -139,6 +139,9 @@
       <DependentUpon>SettingsWin.cs</DependentUpon>
     </Compile>
     <Compile Include="Classes\Updation.cs" />
+    <EmbeddedResource Include="Admin\AdminBroWin.resx">
+      <DependentUpon>AdminBroWin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Admin\AdminCustWin.resx">
       <DependentUpon>AdminCustWin.cs</DependentUpon>
     </EmbeddedResource>

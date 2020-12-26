@@ -8,6 +8,16 @@ namespace SE_ManagementSystem
     internal class CentralControl
     {
         private static string path;
+
+        public static void sNoInitiator(DataGridView dataGridView,string sno)
+        {
+            int count = 0;
+            foreach(DataGridViewRow row in dataGridView.Rows)
+            {
+                count++;
+                row.Cells[sno].Value = count;
+            }
+        }
         public static void ShowWindow(Form WinToOpen, Form WinToClose, Form MDI)
         {
             WinToClose.Close();

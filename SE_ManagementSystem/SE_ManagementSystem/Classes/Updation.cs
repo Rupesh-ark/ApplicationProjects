@@ -32,17 +32,18 @@ namespace SE_ManagementSystem
             }
         }
 
-        public static void UpdateCompany(string companyID, string companyName, string companyType, int marketCapital, Int16 yearEstablished)
+        public static void UpdateCompany(string companyID, string companyName, string companyType, int marketCapital, Int16 yearEstablished, string seName)
         {
             try
             {
-                SqlCommand cmd = new SqlCommand("spInsertCompanies", CentralControl.con);
+                SqlCommand cmd = new SqlCommand("spUpdateCompanies", CentralControl.con);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@companyID", companyID);
                 cmd.Parameters.AddWithValue("@companyName", companyName);
                 cmd.Parameters.AddWithValue("@companyType", companyType);
                 cmd.Parameters.AddWithValue("@marketCapital", marketCapital);
                 cmd.Parameters.AddWithValue("@yearEstablished", yearEstablished);
+                cmd.Parameters.AddWithValue("@seName", seName);
                 CentralControl.con.Open();
                 int res = cmd.ExecuteNonQuery();
                 CentralControl.con.Close();
@@ -57,5 +58,32 @@ namespace SE_ManagementSystem
                 CentralControl.ShowMSG(ex.Message, "Error");
             }
         }
+
+        public static void UpdateBrokers(string brokerID, string brokerName, string password, Int64 commision, string seName)
+        {
+            try
+            {
+                SqlCommand cmd = new SqlCommand("spUpdateBrokers", CentralControl.con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@brokerID", brokerID);
+                cmd.Parameters.AddWithValue("@brokerName", brokerName);
+                cmd.Parameters.AddWithValue("@password", password);
+                cmd.Parameters.AddWithValue("@commision", commision);
+                cmd.Parameters.AddWithValue("@seName", seName);
+                CentralControl.con.Open();
+                int res = cmd.ExecuteNonQuery();
+                CentralControl.con.Close();
+                if (res > 0)
+                {
+                    CentralControl.ShowMSG(brokerID + " updated sucessfully into the system", "Success");
+                }
+            }
+            catch (Exception ex)
+            {
+                CentralControl.con.Close();
+                CentralControl.ShowMSG(ex.Message, "Error");
+            }
+        }
+
     }
 }

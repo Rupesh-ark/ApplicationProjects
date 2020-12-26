@@ -14,8 +14,8 @@ namespace SE_ManagementSystem
         private bool delStatus = false;
         private void AdminCompWin_Load(object sender, EventArgs e)
         {
-            Retrival.LoadItems("spStockExchange_GetName", rolesDropDown, "seName", "seName");
-            rolesDropDown.SelectedItem = -1;
+            Retrival.LoadItems("spStockExchange_GetName", seDropDown, "seName", "seName");
+            seDropDown.SelectedItem = -1;
         }
 
 
@@ -40,7 +40,7 @@ namespace SE_ManagementSystem
             CentralControl.ShowAstrError(marketCapitalTxt, marketCapErr);
             CentralControl.ShowAstrError(yearEstablishedTxt, establishedErr);
 
-            if (compIDErr.Visible || companyNameErr.Visible || companyTypeErr.Visible || marketCapErr.Visible || establishedErr.Visible)
+            if (compIDErr.Visible || companyNameErr.Visible || companyTypeErr.Visible || marketCapErr.Visible || establishedErr.Visible || stockExErr.Visible)
             {
                 CentralControl.ShowMSG("Fields with * are mandatory", "Error");
             }
@@ -48,13 +48,13 @@ namespace SE_ManagementSystem
             {
                 if (edit == false)
                 {
-                    Insertion.InsertCompanies(companyIDTxt.Text, companyNameTxt.Text, companyTypeTxt.Text, Convert.ToInt32(marketCapitalTxt.Text), Convert.ToInt16(yearEstablishedTxt.Text),rolesDropDown.Text);
+                    Insertion.InsertCompanies(companyIDTxt.Text, companyNameTxt.Text, companyTypeTxt.Text, Convert.ToInt32(marketCapitalTxt.Text), Convert.ToInt16(yearEstablishedTxt.Text),seDropDown.Text);
                     CentralControl.ChangeStateReset(left, false);
                     Retrival.GetCompanies(companyDetails,companyID,companyName,companyType,marketCapital,yearEstablished,seName);
                 }
                 else
                 {
-                    Updation.UpdateCompany(companyIDTxt.Text, companyNameTxt.Text, companyTypeTxt.Text, Convert.ToInt32(marketCapitalTxt.Text), Convert.ToInt16(yearEstablishedTxt.Text));
+                    Updation.UpdateCompany(companyIDTxt.Text, companyNameTxt.Text, companyTypeTxt.Text, Convert.ToInt32(marketCapitalTxt.Text), Convert.ToInt16(yearEstablishedTxt.Text), seDropDown.Text);
                     CentralControl.ChangeStateReset(left, false);
                     Retrival.GetCompanies(companyDetails, companyID, companyName, companyType, marketCapital, yearEstablished,seName);
                 }
@@ -83,22 +83,6 @@ namespace SE_ManagementSystem
         {
         }
 
-        private void customerData_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex != -1 && e.ColumnIndex != -1)
-            {
-                edit = true;
-                delStatus = true;
-                CentralControl.ChangeState(left, false);
-                DataGridViewRow row = companyDetails.Rows[e.RowIndex];
-                companyIDTxt.Text = row.Cells["companyID"].Value.ToString();
-                companyNameTxt.Text = row.Cells["companyName"].Value.ToString();
-                companyTypeTxt.Text = row.Cells["companyType"].Value.ToString();
-                marketCapitalTxt.Text = row.Cells["marketCapital"].Value.ToString();
-                yearEstablishedTxt.Text = row.Cells["yearEstablished"].Value.ToString();
-            }
-        }
-
         private void companyIDTxt_TextChanged(object sender, EventArgs e)
         {
             CentralControl.ShowAstrError(companyIDTxt, compIDErr);
@@ -124,9 +108,9 @@ namespace SE_ManagementSystem
             CentralControl.ShowAstrError(yearEstablishedTxt, establishedErr);
         }
 
-        private void rolesDropDown_SelectedIndexChanged(object sender, EventArgs e)
+        private void seDropDown_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (rolesDropDown.SelectedIndex == -1)
+            if (seDropDown.SelectedIndex == -1)
             {
                 stockExErr.Visible = true;
             }
@@ -149,7 +133,7 @@ namespace SE_ManagementSystem
                 companyTypeTxt.Text = row.Cells["companyType"].Value.ToString();
                 marketCapitalTxt.Text = (Convert.ToInt32(row.Cells["marketCapital"].Value)).ToString();
                 yearEstablishedTxt.Text = (Convert.ToInt32(row.Cells["yearEstablished"].Value)).ToString();
-                rolesDropDown.SelectedValue = row.Cells["seName"].Value; 
+                seDropDown.SelectedValue = row.Cells["seName"].Value; 
             }
         }
     }

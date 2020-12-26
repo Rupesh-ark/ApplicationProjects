@@ -55,7 +55,7 @@ namespace SE_ManagementSystem
             this.establishedErr = new System.Windows.Forms.Label();
             this.stockExchangeNameL = new System.Windows.Forms.Label();
             this.stockExErr = new System.Windows.Forms.Label();
-            this.rolesDropDown = new System.Windows.Forms.ComboBox();
+            this.seDropDown = new System.Windows.Forms.ComboBox();
             this.left.SuspendLayout();
             this.topLeft.SuspendLayout();
             this.right.SuspendLayout();
@@ -77,7 +77,7 @@ namespace SE_ManagementSystem
             // 
             // left
             // 
-            this.left.Controls.Add(this.rolesDropDown);
+            this.left.Controls.Add(this.seDropDown);
             this.left.Controls.Add(this.stockExchangeNameL);
             this.left.Controls.Add(this.yearEstablishedTxt);
             this.left.Controls.Add(this.yearEstablishedL);
@@ -115,7 +115,7 @@ namespace SE_ManagementSystem
             this.left.Controls.SetChildIndex(this.stockExchangeNameL, 0);
             this.left.Controls.SetChildIndex(this.topLeft, 0);
             this.left.Controls.SetChildIndex(this.middleLeft, 0);
-            this.left.Controls.SetChildIndex(this.rolesDropDown, 0);
+            this.left.Controls.SetChildIndex(this.seDropDown, 0);
             // 
             // right
             // 
@@ -381,16 +381,19 @@ namespace SE_ManagementSystem
             this.stockExErr.Text = "*";
             this.stockExErr.Visible = false;
             // 
-            // rolesDropDown
+            // seDropDown
             // 
-            this.rolesDropDown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.rolesDropDown.Enabled = false;
-            this.rolesDropDown.FormattingEnabled = true;
-            this.rolesDropDown.Location = new System.Drawing.Point(13, 699);
-            this.rolesDropDown.Name = "rolesDropDown";
-            this.rolesDropDown.Size = new System.Drawing.Size(313, 31);
-            this.rolesDropDown.TabIndex = 31;
-            this.rolesDropDown.SelectedIndexChanged += new System.EventHandler(this.rolesDropDown_SelectedIndexChanged);
+            this.seDropDown.BackColor = System.Drawing.Color.Black;
+            this.seDropDown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.seDropDown.Enabled = false;
+            this.seDropDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.seDropDown.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.seDropDown.FormattingEnabled = true;
+            this.seDropDown.Location = new System.Drawing.Point(13, 699);
+            this.seDropDown.Name = "seDropDown";
+            this.seDropDown.Size = new System.Drawing.Size(313, 31);
+            this.seDropDown.TabIndex = 31;
+            this.seDropDown.SelectedIndexChanged += new System.EventHandler(this.seDropDown_SelectedIndexChanged);
             // 
             // AdminCompWin
             // 
@@ -417,7 +420,7 @@ namespace SE_ManagementSystem
         private System.Windows.Forms.TextBox companyIDTxt;
         private System.Windows.Forms.Label companyIDL;
         private System.Windows.Forms.Label compIDErr;
-        private System.Windows.Forms.ComboBox rolesDropDown;
+        private System.Windows.Forms.ComboBox seDropDown;
         private System.Windows.Forms.Label stockExchangeNameL;
         private System.Windows.Forms.TextBox yearEstablishedTxt;
         private System.Windows.Forms.Label yearEstablishedL;

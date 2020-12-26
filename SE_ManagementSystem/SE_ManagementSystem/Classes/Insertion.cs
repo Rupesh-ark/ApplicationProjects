@@ -63,5 +63,31 @@ namespace SE_ManagementSystem
             }
         }
 
+        public static void InsertBrokers(string brokerID, string brokerName, string password, Int64 commision, string seName)
+        {
+            try
+            {
+                SqlCommand cmd = new SqlCommand("spInsertBrokers", CentralControl.con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@brokerID", brokerID);
+                cmd.Parameters.AddWithValue("@brokerName", brokerName);
+                cmd.Parameters.AddWithValue("@brokerPass", password);
+                cmd.Parameters.AddWithValue("@commision", commision);
+                cmd.Parameters.AddWithValue("@seName", seName);
+                CentralControl.con.Open();
+                int res = cmd.ExecuteNonQuery();
+                CentralControl.con.Close();
+                if (res > 0)
+                {
+                    CentralControl.ShowMSG(brokerID + " added sucessfully into the system", "Success");
+                }
+            }
+            catch (Exception ex)
+            {
+                CentralControl.con.Close();
+                CentralControl.ShowMSG(ex.Message, "Error");
+            }
+        }
+
     }
 }
