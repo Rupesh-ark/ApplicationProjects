@@ -31,5 +31,31 @@ namespace SE_ManagementSystem
                 CentralControl.ShowMSG(ex.Message, "Error");
             }
         }
+
+        public static void UpdateCompany(string companyID, string companyName, string companyType, int marketCapital, Int16 yearEstablished)
+        {
+            try
+            {
+                SqlCommand cmd = new SqlCommand("spInsertCompanies", CentralControl.con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@companyID", companyID);
+                cmd.Parameters.AddWithValue("@companyName", companyName);
+                cmd.Parameters.AddWithValue("@companyType", companyType);
+                cmd.Parameters.AddWithValue("@marketCapital", marketCapital);
+                cmd.Parameters.AddWithValue("@yearEstablished", yearEstablished);
+                CentralControl.con.Open();
+                int res = cmd.ExecuteNonQuery();
+                CentralControl.con.Close();
+                if (res > 0)
+                {
+                    CentralControl.ShowMSG(companyID + " updated sucessfully into the system", "Success");
+                }
+            }
+            catch (Exception ex)
+            {
+                CentralControl.con.Close();
+                CentralControl.ShowMSG(ex.Message, "Error");
+            }
+        }
     }
 }

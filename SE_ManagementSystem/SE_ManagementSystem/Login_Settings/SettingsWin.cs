@@ -86,7 +86,7 @@ namespace SE_ManagementSystem
                                + ";Integrated Security=true;MultipleActiveResultSets=true;";
 
                     saveConnection();
-                    //    updateConfigFile(connection);
+              
                     DialogResult dialogResult = MessageBox.Show("Settings Saved Successfully");
                     if (dialogResult == DialogResult.OK)
                     {
@@ -110,7 +110,6 @@ namespace SE_ManagementSystem
                     connection = "Data Source=" + serverNameTxt.Text
                                 + ";Initial Catalog=" + databaseNameTxt.Text
                                 + ";User ID=" + usernameText.Text + ";Password=" + passwordText.Text + ";MultipleActiveResultSets=true;";
-                    //   updateConfigFile(connection);
                     saveConnection();
                     DialogResult dialogResult = MessageBox.Show("Settings Saved Successfully");
                     if (dialogResult == DialogResult.OK)

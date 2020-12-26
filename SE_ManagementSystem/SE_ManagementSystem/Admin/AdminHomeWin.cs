@@ -52,5 +52,11 @@ namespace SE_ManagementSystem
             AdminChartWin adminChartWin = new AdminChartWin();
             CentralControl.ShowWindow(adminChartWin, this, MDI.ActiveForm);
         }
+
+        private void shareholders_Click(object sender, EventArgs e)
+        {
+            AdminShareholderWin shareholderWin = new AdminShareholderWin();
+            CentralControl.ShowWindow(shareholderWin, this, MDI.ActiveForm);
+        }
     }
 }

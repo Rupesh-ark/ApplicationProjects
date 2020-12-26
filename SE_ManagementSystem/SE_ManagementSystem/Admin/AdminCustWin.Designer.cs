@@ -29,14 +29,8 @@ namespace SE_ManagementSystem
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.detailsGroup = new System.Windows.Forms.GroupBox();
             this.customerData = new System.Windows.Forms.DataGridView();
-            this.sNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.customerID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.customerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cusPass = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.customerAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.customerNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.customerIDL = new System.Windows.Forms.Label();
             this.customerIDTxt = new System.Windows.Forms.TextBox();
             this.customerNameTxt = new System.Windows.Forms.TextBox();
@@ -52,10 +46,16 @@ namespace SE_ManagementSystem
             this.passErr = new System.Windows.Forms.Label();
             this.AddErr = new System.Windows.Forms.Label();
             this.numErr = new System.Windows.Forms.Label();
+            this.sNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.customerID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.customerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cusPass = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.customerAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.customerNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.left.SuspendLayout();
             this.topLeft.SuspendLayout();
             this.right.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.detailsGroup.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.customerData)).BeginInit();
             this.SuspendLayout();
             // 
@@ -109,27 +109,27 @@ namespace SE_ManagementSystem
             // 
             // right
             // 
-            this.right.Controls.Add(this.groupBox1);
+            this.right.Controls.Add(this.detailsGroup);
             this.right.Size = new System.Drawing.Size(973, 757);
             this.right.Controls.SetChildIndex(this.topRight, 0);
             this.right.Controls.SetChildIndex(this.middleRight, 0);
-            this.right.Controls.SetChildIndex(this.groupBox1, 0);
+            this.right.Controls.SetChildIndex(this.detailsGroup, 0);
             // 
             // topRight
             // 
             this.topRight.Size = new System.Drawing.Size(973, 72);
             // 
-            // groupBox1
+            // detailsGroup
             // 
-            this.groupBox1.Controls.Add(this.customerData);
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox1.ForeColor = System.Drawing.Color.Cyan;
-            this.groupBox1.Location = new System.Drawing.Point(0, 142);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(973, 615);
-            this.groupBox1.TabIndex = 2;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Details";
+            this.detailsGroup.Controls.Add(this.customerData);
+            this.detailsGroup.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.detailsGroup.ForeColor = System.Drawing.Color.Cyan;
+            this.detailsGroup.Location = new System.Drawing.Point(0, 142);
+            this.detailsGroup.Name = "detailsGroup";
+            this.detailsGroup.Size = new System.Drawing.Size(973, 615);
+            this.detailsGroup.TabIndex = 2;
+            this.detailsGroup.TabStop = false;
+            this.detailsGroup.Text = "Details";
             // 
             // customerData
             // 
@@ -154,49 +154,6 @@ namespace SE_ManagementSystem
             this.customerData.TabIndex = 0;
             this.customerData.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.customerData_CellClick);
             // 
-            // sNo
-            // 
-            this.sNo.HeaderText = "Column1";
-            this.sNo.MinimumWidth = 6;
-            this.sNo.Name = "sNo";
-            this.sNo.ReadOnly = true;
-            this.sNo.Visible = false;
-            // 
-            // customerID
-            // 
-            this.customerID.HeaderText = "ID";
-            this.customerID.MinimumWidth = 6;
-            this.customerID.Name = "customerID";
-            this.customerID.ReadOnly = true;
-            // 
-            // customerName
-            // 
-            this.customerName.HeaderText = "Name";
-            this.customerName.MinimumWidth = 6;
-            this.customerName.Name = "customerName";
-            this.customerName.ReadOnly = true;
-            // 
-            // cusPass
-            // 
-            this.cusPass.HeaderText = "Password";
-            this.cusPass.MinimumWidth = 6;
-            this.cusPass.Name = "cusPass";
-            this.cusPass.ReadOnly = true;
-            // 
-            // customerAddress
-            // 
-            this.customerAddress.HeaderText = "Address";
-            this.customerAddress.MinimumWidth = 6;
-            this.customerAddress.Name = "customerAddress";
-            this.customerAddress.ReadOnly = true;
-            // 
-            // customerNum
-            // 
-            this.customerNum.HeaderText = "Mobile Number";
-            this.customerNum.MinimumWidth = 6;
-            this.customerNum.Name = "customerNum";
-            this.customerNum.ReadOnly = true;
-            // 
             // customerIDL
             // 
             this.customerIDL.AutoSize = true;
@@ -208,17 +165,21 @@ namespace SE_ManagementSystem
             // 
             // customerIDTxt
             // 
+            this.customerIDTxt.Enabled = false;
             this.customerIDTxt.Location = new System.Drawing.Point(12, 438);
             this.customerIDTxt.Name = "customerIDTxt";
             this.customerIDTxt.Size = new System.Drawing.Size(313, 30);
             this.customerIDTxt.TabIndex = 3;
+            this.customerIDTxt.TextChanged += new System.EventHandler(this.customerIDTxt_TextChanged);
             // 
             // customerNameTxt
             // 
+            this.customerNameTxt.Enabled = false;
             this.customerNameTxt.Location = new System.Drawing.Point(12, 502);
             this.customerNameTxt.Name = "customerNameTxt";
             this.customerNameTxt.Size = new System.Drawing.Size(313, 30);
             this.customerNameTxt.TabIndex = 5;
+            this.customerNameTxt.TextChanged += new System.EventHandler(this.customerNameTxt_TextChanged);
             // 
             // customerNameL
             // 
@@ -231,10 +192,12 @@ namespace SE_ManagementSystem
             // 
             // customerAddTxt
             // 
+            this.customerAddTxt.Enabled = false;
             this.customerAddTxt.Location = new System.Drawing.Point(12, 635);
             this.customerAddTxt.Name = "customerAddTxt";
             this.customerAddTxt.Size = new System.Drawing.Size(313, 30);
             this.customerAddTxt.TabIndex = 9;
+            this.customerAddTxt.TextChanged += new System.EventHandler(this.customerAddTxt_TextChanged);
             // 
             // customerAddressL
             // 
@@ -247,10 +210,13 @@ namespace SE_ManagementSystem
             // 
             // passwordTxt
             // 
+            this.passwordTxt.Enabled = false;
             this.passwordTxt.Location = new System.Drawing.Point(12, 571);
             this.passwordTxt.Name = "passwordTxt";
             this.passwordTxt.Size = new System.Drawing.Size(313, 30);
             this.passwordTxt.TabIndex = 7;
+            this.passwordTxt.UseSystemPasswordChar = true;
+            this.passwordTxt.TextChanged += new System.EventHandler(this.passwordTxt_TextChanged);
             // 
             // cusPassL
             // 
@@ -263,10 +229,12 @@ namespace SE_ManagementSystem
             // 
             // customerMobTxt
             // 
+            this.customerMobTxt.Enabled = false;
             this.customerMobTxt.Location = new System.Drawing.Point(12, 704);
             this.customerMobTxt.Name = "customerMobTxt";
             this.customerMobTxt.Size = new System.Drawing.Size(313, 30);
             this.customerMobTxt.TabIndex = 11;
+            this.customerMobTxt.TextChanged += new System.EventHandler(this.customerMobTxt_TextChanged);
             // 
             // customerMobL
             // 
@@ -332,6 +300,49 @@ namespace SE_ManagementSystem
             this.numErr.Text = "*";
             this.numErr.Visible = false;
             // 
+            // sNo
+            // 
+            this.sNo.HeaderText = "";
+            this.sNo.MinimumWidth = 6;
+            this.sNo.Name = "sNo";
+            this.sNo.ReadOnly = true;
+            this.sNo.Visible = false;
+            // 
+            // customerID
+            // 
+            this.customerID.HeaderText = "ID";
+            this.customerID.MinimumWidth = 6;
+            this.customerID.Name = "customerID";
+            this.customerID.ReadOnly = true;
+            // 
+            // customerName
+            // 
+            this.customerName.HeaderText = "Name";
+            this.customerName.MinimumWidth = 6;
+            this.customerName.Name = "customerName";
+            this.customerName.ReadOnly = true;
+            // 
+            // cusPass
+            // 
+            this.cusPass.HeaderText = "Password";
+            this.cusPass.MinimumWidth = 6;
+            this.cusPass.Name = "cusPass";
+            this.cusPass.ReadOnly = true;
+            // 
+            // customerAddress
+            // 
+            this.customerAddress.HeaderText = "Address";
+            this.customerAddress.MinimumWidth = 6;
+            this.customerAddress.Name = "customerAddress";
+            this.customerAddress.ReadOnly = true;
+            // 
+            // customerNum
+            // 
+            this.customerNum.HeaderText = "Mobile Number";
+            this.customerNum.MinimumWidth = 6;
+            this.customerNum.Name = "customerNum";
+            this.customerNum.ReadOnly = true;
+            // 
             // AdminCustWin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
@@ -343,7 +354,7 @@ namespace SE_ManagementSystem
             this.left.PerformLayout();
             this.topLeft.ResumeLayout(false);
             this.right.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
+            this.detailsGroup.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.customerData)).EndInit();
             this.ResumeLayout(false);
 
@@ -353,14 +364,8 @@ namespace SE_ManagementSystem
 
         private System.Windows.Forms.TextBox customerIDTxt;
         private System.Windows.Forms.Label customerIDL;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox detailsGroup;
         private System.Windows.Forms.DataGridView customerData;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sNo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn customerID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn customerName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cusPass;
-        private System.Windows.Forms.DataGridViewTextBoxColumn customerAddress;
-        private System.Windows.Forms.DataGridViewTextBoxColumn customerNum;
         private System.Windows.Forms.TextBox customerMobTxt;
         private System.Windows.Forms.Label customerMobL;
         private System.Windows.Forms.TextBox customerAddTxt;
@@ -374,5 +379,11 @@ namespace SE_ManagementSystem
         private System.Windows.Forms.Label passErr;
         private System.Windows.Forms.Label AddErr;
         private System.Windows.Forms.Label numErr;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sNo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn customerID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn customerName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cusPass;
+        private System.Windows.Forms.DataGridViewTextBoxColumn customerAddress;
+        private System.Windows.Forms.DataGridViewTextBoxColumn customerNum;
     }
 }

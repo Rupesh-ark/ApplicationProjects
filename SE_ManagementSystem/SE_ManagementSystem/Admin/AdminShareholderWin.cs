@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SE_ManagementSystem
 {
-    public partial class AdminBroWin : SecondSampleForm
+    public partial class AdminShareholderWin : SecondSampleForm
     {
-        public AdminBroWin()
+        public AdminShareholderWin()
         {
             InitializeComponent();
         }

@@ -29,10 +29,47 @@ namespace SE_ManagementSystem
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.left.SuspendLayout();
+            this.topLeft.SuspendLayout();
+            this.right.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // middleRight
+            // 
+            this.middleRight.Size = new System.Drawing.Size(853, 70);
+            // 
+            // searchText
+            // 
+            this.searchText.Size = new System.Drawing.Size(131, 30);
+            // 
+            // backBtn
+            // 
+            this.backBtn.FlatAppearance.BorderSize = 0;
+            // 
+            // left
+            // 
+            this.left.Size = new System.Drawing.Size(350, 660);
+            // 
+            // right
+            // 
+            this.right.Size = new System.Drawing.Size(853, 660);
+            // 
+            // topRight
+            // 
+            this.topRight.Size = new System.Drawing.Size(853, 72);
+            // 
+            // AdminStockWin
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1203, 660);
+            this.Name = "AdminStockWin";
             this.Text = "AdminStockWin";
+            this.left.ResumeLayout(false);
+            this.topLeft.ResumeLayout(false);
+            this.right.ResumeLayout(false);
+            this.ResumeLayout(false);
+
         }
 
         #endregion

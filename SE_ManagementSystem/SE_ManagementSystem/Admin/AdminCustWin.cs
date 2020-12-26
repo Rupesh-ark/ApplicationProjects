@@ -15,11 +15,10 @@ namespace SE_ManagementSystem
         public AdminCustWin()
         {
             InitializeComponent();
-            CentralControl.ChangeState(left, false);
         }
 
-        bool edit = false;
-        bool delStatus = false;
+        private bool edit = false;
+        private bool delStatus = false;
 
         public override void addBtn_Click(object sender, EventArgs e)
         {
@@ -94,11 +93,6 @@ namespace SE_ManagementSystem
 
         }
 
-
-        private void AdminCustWin_Load(object sender, EventArgs e)
-        {
-        }
-
         private void customerData_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if(e.RowIndex != -1 && e.ColumnIndex != -1)
@@ -114,6 +108,31 @@ namespace SE_ManagementSystem
                 customerMobTxt.Text = row.Cells["customerNum"].Value.ToString();
 
             }
+        }
+
+        private void customerMobTxt_TextChanged(object sender, EventArgs e)
+        {
+            CentralControl.ShowAstrError(customerMobTxt, numErr);
+        }
+
+        private void customerNameTxt_TextChanged(object sender, EventArgs e)
+        {
+            CentralControl.ShowAstrError(customerNameTxt, nameErr);
+        }
+
+        private void passwordTxt_TextChanged(object sender, EventArgs e)
+        {
+            CentralControl.ShowAstrError(passwordTxt, passErr);
+        }
+
+        private void customerAddTxt_TextChanged(object sender, EventArgs e)
+        {
+            CentralControl.ShowAstrError(customerAddTxt, AddErr);
+        }
+
+        private void customerIDTxt_TextChanged(object sender, EventArgs e)
+        {
+            CentralControl.ShowAstrError(customerIDTxt, custIDErr);
         }
     }
 }

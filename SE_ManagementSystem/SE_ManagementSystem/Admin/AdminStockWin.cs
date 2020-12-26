@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace SE_ManagementSystem
 {
-    public partial class AdminStockWin : SampleIntermediate
+    public partial class AdminStockWin : SecondSampleForm
     {
         public AdminStockWin()
         {

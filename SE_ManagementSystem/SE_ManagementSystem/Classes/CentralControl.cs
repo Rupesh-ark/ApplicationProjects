@@ -167,6 +167,41 @@ namespace SE_ManagementSystem
             }
         }
 
+        public static bool CheckControls(Panel panel)
+        {
+            bool ch = false;
+
+            foreach (Control control in panel.Controls)
+            {
+                if (control is TextBox)
+                {
+                    TextBox textBox = (TextBox)control;
+            
+                    ch = textBox.Text == "" ? false : true;
+                }
+                if (control is ComboBox)
+                {
+                    ComboBox comboBox = (ComboBox)control;
+             
+                    ch = comboBox.SelectedIndex == -1 ? false : true;
+                }
+                if (control is RadioButton)
+                {
+                    RadioButton radioButton = (RadioButton)control;
+                
+                    ch = radioButton.Checked == false ? false : true;
+                }
+                if (control is CheckBox)
+                {
+                    CheckBox checkBox = (CheckBox)control;
+             
+                    ch = checkBox.Checked == false? false : true;
+                }
+            }
+
+            return ch;
+        }
+
         private static string ConnectionString()
         {
            path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\StockExchangeManagement_connect";

@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace SE_ManagementSystem
 {
-    public partial class AdminChartWin : SampleIntermediate
+    public partial class AdminChartWin : SecondSampleForm
     {
         public AdminChartWin()
         {

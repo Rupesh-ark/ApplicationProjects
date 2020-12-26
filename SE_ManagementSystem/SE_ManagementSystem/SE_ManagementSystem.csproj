@@ -48,10 +48,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdminCustWin.cs">
+    <Compile Include="Admin\AdminCustWin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminCustWin.Designer.cs">
+    <Compile Include="Admin\AdminCustWin.Designer.cs">
       <DependentUpon>AdminCustWin.cs</DependentUpon>
     </Compile>
     <Compile Include="Admin\AdminBroWin.cs">
@@ -78,6 +78,12 @@
     <Compile Include="Admin\AdminHomeWin.Designer.cs">
       <DependentUpon>AdminHomeWin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Admin\AdminShareholderWin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminShareholderWin.Designer.cs">
+      <DependentUpon>AdminShareholderWin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admin\AdminStockWin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,8 +97,8 @@
       <DependentUpon>AdminTransWin.cs</DependentUpon>
     </Compile>
     <Compile Include="Classes\CentralControl.cs" />
-    <Compile Include="Deletion.cs" />
-    <Compile Include="Insertion.cs" />
+    <Compile Include="Classes\Deletion.cs" />
+    <Compile Include="Classes\Insertion.cs" />
     <Compile Include="Login_Settings\LoginWin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,9 +111,9 @@
     <Compile Include="MDI.Designer.cs">
       <DependentUpon>MDI.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
+    <Compile Include="Classes\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Retrival.cs" />
+    <Compile Include="Classes\Retrival.cs" />
     <Compile Include="SampleGroup\SampleIntermediate.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,8 +138,8 @@
     <Compile Include="Login_Settings\SettingsWin.Designer.cs">
       <DependentUpon>SettingsWin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Updation.cs" />
-    <EmbeddedResource Include="AdminCustWin.resx">
+    <Compile Include="Classes\Updation.cs" />
+    <EmbeddedResource Include="Admin\AdminCustWin.resx">
       <DependentUpon>AdminCustWin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\AdminChartWin.resx">
@@ -144,6 +150,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\AdminHomeWin.resx">
       <DependentUpon>AdminHomeWin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\AdminShareholderWin.resx">
+      <DependentUpon>AdminShareholderWin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\AdminStockWin.resx">
+      <DependentUpon>AdminStockWin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\AdminTransWin.resx">
+      <DependentUpon>AdminTransWin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login_Settings\LoginWin.resx">
       <DependentUpon>LoginWin.cs</DependentUpon>
@@ -182,9 +197,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\064-Back.png" />

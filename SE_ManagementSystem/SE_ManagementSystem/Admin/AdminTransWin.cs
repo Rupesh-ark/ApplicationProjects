@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace SE_ManagementSystem
 {
-    public partial class AdminTransWin : SampleIntermediate
+    public partial class AdminTransWin : SecondSampleForm
     {
         public AdminTransWin()
         {
