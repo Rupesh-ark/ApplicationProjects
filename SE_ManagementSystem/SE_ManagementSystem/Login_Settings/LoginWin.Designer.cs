@@ -34,8 +34,12 @@ namespace SE_ManagementSystem
             this.passwordText = new System.Windows.Forms.TextBox();
             this.passwordL = new System.Windows.Forms.Label();
             this.login = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.usernameErr = new System.Windows.Forms.Label();
+            this.passErr = new System.Windows.Forms.Label();
             this.left.SuspendLayout();
             this.right.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // left
@@ -45,8 +49,12 @@ namespace SE_ManagementSystem
             this.left.Controls.Add(this.passwordL);
             this.left.Controls.Add(this.usernameText);
             this.left.Controls.Add(this.usernameL);
-            this.left.Size = new System.Drawing.Size(350, 610);
+            this.left.Controls.Add(this.passErr);
+            this.left.Controls.Add(this.usernameErr);
+            this.left.Size = new System.Drawing.Size(350, 1033);
             this.left.Controls.SetChildIndex(this.topLeft, 0);
+            this.left.Controls.SetChildIndex(this.usernameErr, 0);
+            this.left.Controls.SetChildIndex(this.passErr, 0);
             this.left.Controls.SetChildIndex(this.usernameL, 0);
             this.left.Controls.SetChildIndex(this.usernameText, 0);
             this.left.Controls.SetChildIndex(this.passwordL, 0);
@@ -55,11 +63,14 @@ namespace SE_ManagementSystem
             // 
             // right
             // 
-            this.right.Size = new System.Drawing.Size(640, 610);
+            this.right.Controls.Add(this.pictureBox1);
+            this.right.Size = new System.Drawing.Size(1552, 1033);
+            this.right.Controls.SetChildIndex(this.topRight, 0);
+            this.right.Controls.SetChildIndex(this.pictureBox1, 0);
             // 
             // topRight
             // 
-            this.topRight.Size = new System.Drawing.Size(640, 72);
+            this.topRight.Size = new System.Drawing.Size(1552, 72);
             // 
             // usernameL
             // 
@@ -77,6 +88,7 @@ namespace SE_ManagementSystem
             this.usernameText.Name = "usernameText";
             this.usernameText.Size = new System.Drawing.Size(278, 30);
             this.usernameText.TabIndex = 2;
+            this.usernameText.TextChanged += new System.EventHandler(this.usernameText_TextChanged);
             // 
             // passwordText
             // 
@@ -85,6 +97,7 @@ namespace SE_ManagementSystem
             this.passwordText.Size = new System.Drawing.Size(278, 30);
             this.passwordText.TabIndex = 4;
             this.passwordText.UseSystemPasswordChar = true;
+            this.passwordText.TextChanged += new System.EventHandler(this.passwordText_TextChanged);
             // 
             // passwordL
             // 
@@ -109,16 +122,51 @@ namespace SE_ManagementSystem
             this.login.UseVisualStyleBackColor = true;
             this.login.Click += new System.EventHandler(this.login_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = global::SE_ManagementSystem.Properties.Resources.LoginBack2;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 72);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1552, 961);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
+            // usernameErr
+            // 
+            this.usernameErr.AutoSize = true;
+            this.usernameErr.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.usernameErr.Location = new System.Drawing.Point(276, 318);
+            this.usernameErr.Name = "usernameErr";
+            this.usernameErr.Size = new System.Drawing.Size(17, 23);
+            this.usernameErr.TabIndex = 6;
+            this.usernameErr.Text = "*";
+            this.usernameErr.Visible = false;
+            // 
+            // passErr
+            // 
+            this.passErr.AutoSize = true;
+            this.passErr.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.passErr.Location = new System.Drawing.Point(276, 393);
+            this.passErr.Name = "passErr";
+            this.passErr.Size = new System.Drawing.Size(17, 23);
+            this.passErr.TabIndex = 7;
+            this.passErr.Text = "*";
+            this.passErr.Visible = false;
+            // 
             // LoginWin
             // 
+            this.AcceptButton = this.login;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(990, 610);
+            this.ClientSize = new System.Drawing.Size(1902, 1033);
             this.Name = "LoginWin";
             this.Text = "Login";
             this.left.ResumeLayout(false);
             this.left.PerformLayout();
             this.right.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -130,5 +178,8 @@ namespace SE_ManagementSystem
         private System.Windows.Forms.Label passwordL;
         private System.Windows.Forms.TextBox usernameText;
         private System.Windows.Forms.Label usernameL;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label passErr;
+        private System.Windows.Forms.Label usernameErr;
     }
 }

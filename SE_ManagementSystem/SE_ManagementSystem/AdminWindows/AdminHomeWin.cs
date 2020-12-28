@@ -47,12 +47,6 @@ namespace SE_ManagementSystem
             CentralControl.ShowWindow(adminStockWin, this, MDI.ActiveForm);
         }
 
-        private void chart_Click(object sender, EventArgs e)
-        {
-            AdminChartWin adminChartWin = new AdminChartWin();
-            CentralControl.ShowWindow(adminChartWin, this, MDI.ActiveForm);
-        }
-
         private void shareholders_Click(object sender, EventArgs e)
         {
             AdminShareholderWin shareholderWin = new AdminShareholderWin();

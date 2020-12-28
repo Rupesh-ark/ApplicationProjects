@@ -5,6 +5,13 @@ using System.Windows.Forms;
 
 namespace SE_ManagementSystem
 {
+    enum AuthLevel
+    {
+        None,
+        AdminLevel,
+        CustomerLevel
+    }
+
     internal class CentralControl
     {
         private static string path;

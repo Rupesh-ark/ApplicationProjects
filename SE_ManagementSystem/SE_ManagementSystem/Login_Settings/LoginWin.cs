@@ -19,8 +19,31 @@ namespace SE_ManagementSystem
 
         private void login_Click(object sender, EventArgs e)
         {
+            CentralControl.ShowAstrError(passwordText, passErr);
             AdminHomeWin adminHomeWin = new AdminHomeWin();
-            CentralControl.ShowWindow(adminHomeWin, this, MDI.ActiveForm);
+            if(usernameErr.Visible|| passErr.Visible)
+            {
+                CentralControl.ShowMSG("Fields with * cannot be left blank", "Error");
+            }
+            else
+            {   
+                if(Retrival.IsValidUser(usernameText.Text,passwordText.Text) && (Retrival.AUTH == AuthLevel.AdminLevel))
+                {
+                    CentralControl.ShowWindow(adminHomeWin, this, MDI.ActiveForm);
+                }
+                
+            }
+                
+        }
+
+        private void passwordText_TextChanged(object sender, EventArgs e)
+        {
+            CentralControl.ShowAstrError(passwordText, passErr);
+        }
+
+        private void usernameText_TextChanged(object sender, EventArgs e)
+        {
+            CentralControl.ShowAstrError(usernameText, usernameErr);
         }
     }
 }

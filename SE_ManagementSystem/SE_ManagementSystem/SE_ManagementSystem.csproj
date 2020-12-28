@@ -48,52 +48,52 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Admin\AdminCustWin.cs">
+    <Compile Include="AdminWindows\AdminCustWin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Admin\AdminCustWin.Designer.cs">
+    <Compile Include="AdminWindows\AdminCustWin.Designer.cs">
       <DependentUpon>AdminCustWin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Admin\AdminBroWin.cs">
+    <Compile Include="AdminWindows\AdminBroWin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Admin\AdminBroWin.Designer.cs">
+    <Compile Include="AdminWindows\AdminBroWin.Designer.cs">
       <DependentUpon>AdminBroWin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Admin\AdminChartWin.cs">
+    <Compile Include="AdminWindows\AdminChartWin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Admin\AdminChartWin.Designer.cs">
+    <Compile Include="AdminWindows\AdminChartWin.Designer.cs">
       <DependentUpon>AdminChartWin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Admin\AdminCompWin.cs">
+    <Compile Include="AdminWindows\AdminCompWin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Admin\AdminCompWin.Designer.cs">
+    <Compile Include="AdminWindows\AdminCompWin.Designer.cs">
       <DependentUpon>AdminCompWin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Admin\AdminHomeWin.cs">
+    <Compile Include="AdminWindows\AdminHomeWin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Admin\AdminHomeWin.Designer.cs">
+    <Compile Include="AdminWindows\AdminHomeWin.Designer.cs">
       <DependentUpon>AdminHomeWin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Admin\AdminShareholderWin.cs">
+    <Compile Include="AdminWindows\AdminShareholderWin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Admin\AdminShareholderWin.Designer.cs">
+    <Compile Include="AdminWindows\AdminShareholderWin.Designer.cs">
       <DependentUpon>AdminShareholderWin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Admin\AdminStockWin.cs">
+    <Compile Include="AdminWindows\AdminStockWin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Admin\AdminStockWin.Designer.cs">
+    <Compile Include="AdminWindows\AdminStockWin.Designer.cs">
       <DependentUpon>AdminStockWin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Admin\AdminTransWin.cs">
+    <Compile Include="AdminWindows\AdminTransWin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Admin\AdminTransWin.Designer.cs">
+    <Compile Include="AdminWindows\AdminTransWin.Designer.cs">
       <DependentUpon>AdminTransWin.cs</DependentUpon>
     </Compile>
     <Compile Include="Classes\CentralControl.cs" />
@@ -139,28 +139,28 @@
       <DependentUpon>SettingsWin.cs</DependentUpon>
     </Compile>
     <Compile Include="Classes\Updation.cs" />
-    <EmbeddedResource Include="Admin\AdminBroWin.resx">
+    <EmbeddedResource Include="AdminWindows\AdminBroWin.resx">
       <DependentUpon>AdminBroWin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Admin\AdminCustWin.resx">
+    <EmbeddedResource Include="AdminWindows\AdminCustWin.resx">
       <DependentUpon>AdminCustWin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Admin\AdminChartWin.resx">
+    <EmbeddedResource Include="AdminWindows\AdminChartWin.resx">
       <DependentUpon>AdminChartWin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Admin\AdminCompWin.resx">
+    <EmbeddedResource Include="AdminWindows\AdminCompWin.resx">
       <DependentUpon>AdminCompWin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Admin\AdminHomeWin.resx">
+    <EmbeddedResource Include="AdminWindows\AdminHomeWin.resx">
       <DependentUpon>AdminHomeWin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Admin\AdminShareholderWin.resx">
+    <EmbeddedResource Include="AdminWindows\AdminShareholderWin.resx">
       <DependentUpon>AdminShareholderWin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Admin\AdminStockWin.resx">
+    <EmbeddedResource Include="AdminWindows\AdminStockWin.resx">
       <DependentUpon>AdminStockWin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Admin\AdminTransWin.resx">
+    <EmbeddedResource Include="AdminWindows\AdminTransWin.resx">
       <DependentUpon>AdminTransWin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login_Settings\LoginWin.resx">
@@ -203,6 +203,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\064-Back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assests\backgrounds\LoginBack2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

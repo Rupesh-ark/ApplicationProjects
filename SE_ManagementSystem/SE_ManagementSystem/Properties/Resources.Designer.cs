@@ -70,12 +70,13 @@ namespace SE_ManagementSystem.Properties {
             }
         }
         
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _064_Back4 {
+        internal static System.Drawing.Bitmap LoginBack2 {
             get {
-                object obj = ResourceManager.GetObject("064-Back4", resourceCulture);
+                object obj = ResourceManager.GetObject("LoginBack2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

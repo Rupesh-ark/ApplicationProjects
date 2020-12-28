@@ -1,16 +1,26 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Data;
 using System.Data.SqlClient;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SE_ManagementSystem
 {
-    class Retrival
+    internal class Retrival
     {
+        private static AuthLevel auth = AuthLevel.None;
+
+        public static AuthLevel AUTH
+        {
+            get
+            {
+                return auth;
+            }
+            set
+            {
+                auth = value;
+            }
+        }
+
         public static void GetCustomers(DataGridView dataGridView, DataGridViewColumn customerID, DataGridViewColumn customerName, DataGridViewColumn cusPass, DataGridViewColumn customerAddress, DataGridViewColumn customerNum)
         {
             try
@@ -29,7 +39,7 @@ namespace SE_ManagementSystem
 
                 CentralControl.sNoInitiator(dataGridView, "sNO");
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 CentralControl.ShowMSG(ex.Message, "Error");
             }
@@ -56,7 +66,6 @@ namespace SE_ManagementSystem
             }
             catch (Exception ex)
             {
-
                 CentralControl.ShowMSG(ex.Message, "Error");
             }
         }
@@ -81,7 +90,6 @@ namespace SE_ManagementSystem
             }
             catch (Exception ex)
             {
-
                 CentralControl.ShowMSG(ex.Message, "Error");
             }
         }
@@ -108,13 +116,11 @@ namespace SE_ManagementSystem
             }
             catch (Exception ex)
             {
-
                 CentralControl.ShowMSG(ex.Message, "Error");
             }
-
         }
 
-        public static void LoadItems(string proc, ComboBox comboBox,string displayMember,string valueMember)
+        public static void LoadItems(string proc, ComboBox comboBox, string displayMember, string valueMember)
         {
             try
             {
@@ -129,11 +135,45 @@ namespace SE_ManagementSystem
             }
             catch (Exception ex)
             {
-
                 CentralControl.ShowMSG(ex.Message, "Error");
             }
         }
 
-
+        public static bool IsValidUser(string user, string pass)
+        {
+            bool status = false;
+            try
+            {
+                SqlCommand cmd = new SqlCommand("spAuthCred_GetSpecific", CentralControl.con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@userID", user);
+                cmd.Parameters.AddWithValue("password", pass);
+                CentralControl.con.Open();
+                SqlDataReader dr = cmd.ExecuteReader();
+                if (dr.HasRows)
+                {
+                    while (dr.Read())
+                    {
+                        if (user == dr["ID"].ToString() && pass == dr["password"].ToString())
+                        {
+                            AUTH = (AuthLevel)Convert.ToInt32((dr["AuthLevel"].ToString()));
+                            status = true;
+                        }
+                        else
+                            status = false;
+                    }
+                }
+                else
+                {
+                    CentralControl.ShowMSG("Invalid username & password", "Error");
+                    status = false;
+                }
+            }
+            catch (Exception ex)
+            {
+                CentralControl.ShowMSG(ex.Message, "Error");
+            }
+            return status;
+        }
     }
 }
