@@ -86,6 +86,33 @@ namespace SE_ManagementSystem
             }
         }
 
+        public static void GetShares(DataGridView dataGridView, DataGridViewColumn shareName, DataGridViewColumn companyID, DataGridViewColumn changeInPrice, DataGridViewColumn openingPrice, DataGridViewColumn volume, DataGridViewColumn holdingsCost, DataGridViewColumn holdingsQuantity)
+        {
+            try
+            {
+                SqlCommand cmd = new SqlCommand("spShares_GetAll", CentralControl.con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                shareName.DataPropertyName = dt.Columns["shareName"].ToString();
+                companyID.DataPropertyName = dt.Columns["companyID"].ToString();
+                changeInPrice.DataPropertyName = dt.Columns["changeInPrice"].ToString();
+                openingPrice.DataPropertyName = dt.Columns["openingPrice"].ToString();
+                volume.DataPropertyName = dt.Columns["volume"].ToString();
+                holdingsCost.DataPropertyName = dt.Columns["holdingsCost"].ToString();
+                holdingsQuantity.DataPropertyName = dt.Columns["holdingsQuantity"].ToString();
+
+                dataGridView.DataSource = dt;
+                CentralControl.sNoInitiator(dataGridView, "sNO");
+            }
+            catch (Exception ex)
+            {
+
+                CentralControl.ShowMSG(ex.Message, "Error");
+            }
+
+        }
 
         public static void LoadItems(string proc, ComboBox comboBox,string displayMember,string valueMember)
         {

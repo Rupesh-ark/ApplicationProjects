@@ -30,7 +30,8 @@ create table Shares(shareName varchar(10) primary key,
   changeInPrice money not null,
   openingPrice money not null,
   volume smallint not null,
-  holdingsCost money not null
+  holdingsCost money not null,
+  holdingsQuantity smallint not null
   );
 
 create table StockQuote(companyID varchar(10) foreign key references Companies(companyID) on delete cascade,

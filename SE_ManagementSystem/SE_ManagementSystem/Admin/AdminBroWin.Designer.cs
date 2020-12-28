@@ -236,6 +236,7 @@ namespace SE_ManagementSystem
             // 
             // seDropDown
             // 
+            this.seDropDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.seDropDown.FormattingEnabled = true;
             this.seDropDown.Location = new System.Drawing.Point(12, 639);
             this.seDropDown.Name = "seDropDown";

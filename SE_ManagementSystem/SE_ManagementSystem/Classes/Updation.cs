@@ -85,5 +85,33 @@ namespace SE_ManagementSystem
             }
         }
 
+        public static void UpdateShares(string shareName, string companyID, Int32 openingPrice, Int16 volume, Int32 holdingsCost, Int16 holdingsQuantity)
+        {
+
+            try
+            {
+                SqlCommand cmd = new SqlCommand("spUpdateShares", CentralControl.con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@shareName", shareName);
+                cmd.Parameters.AddWithValue("@companyID", companyID);
+                cmd.Parameters.AddWithValue("@openingPrice", openingPrice);
+                cmd.Parameters.AddWithValue("@volume", volume);
+                cmd.Parameters.AddWithValue("@holdingsCost", holdingsCost);
+                cmd.Parameters.AddWithValue("@holdingsQuantity", holdingsQuantity);
+                CentralControl.con.Open();
+                int res = cmd.ExecuteNonQuery();
+                CentralControl.con.Close();
+                if (res > 0)
+                {
+                    CentralControl.ShowMSG(shareName + " updated sucessfully into the system", "Success");
+                }
+            }
+            catch (Exception ex)
+            {
+                CentralControl.con.Close();
+                CentralControl.ShowMSG(ex.Message, "Error");
+            }
+        }
+
     }
 }

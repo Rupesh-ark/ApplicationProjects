@@ -17,26 +17,11 @@ namespace SE_ManagementSystem
             InitializeComponent();
         }
 
-        private bool edit = false;
-        private bool delStatus = false;
 
         private void AdminBroWin_Load(object sender, EventArgs e)
         {
             Retrival.LoadItems("spStockExchange_GetName", seDropDown, "seName", "seName");
             seDropDown.SelectedItem = -1;
-        }
-
-        public override void addBtn_Click(object sender, EventArgs e)
-        {
-            edit = false;
-            CentralControl.ChangeStateReset(left, true);
-            delStatus = false;
-        }
-
-        public override void editBtn_Click(object sender, EventArgs e)
-        {
-            edit = true;
-            CentralControl.ChangeState(left, true);
         }
 
         public override void saveBtn_Click(object sender, EventArgs e)
