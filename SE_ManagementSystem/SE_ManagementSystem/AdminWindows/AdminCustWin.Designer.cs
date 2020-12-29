@@ -31,6 +31,12 @@ namespace SE_ManagementSystem
         {
             this.detailsGroup = new System.Windows.Forms.GroupBox();
             this.customerData = new System.Windows.Forms.DataGridView();
+            this.sNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.customerID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.customerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cusPass = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.customerAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.customerNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.customerIDL = new System.Windows.Forms.Label();
             this.customerIDTxt = new System.Windows.Forms.TextBox();
             this.customerNameTxt = new System.Windows.Forms.TextBox();
@@ -46,12 +52,6 @@ namespace SE_ManagementSystem
             this.passErr = new System.Windows.Forms.Label();
             this.AddErr = new System.Windows.Forms.Label();
             this.numErr = new System.Windows.Forms.Label();
-            this.sNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.customerID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.customerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cusPass = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.customerAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.customerNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.left.SuspendLayout();
             this.topLeft.SuspendLayout();
             this.right.SuspendLayout();
@@ -66,10 +66,6 @@ namespace SE_ManagementSystem
             // searchText
             // 
             this.searchText.Size = new System.Drawing.Size(151, 30);
-            // 
-            // backBtn
-            // 
-            this.backBtn.FlatAppearance.BorderSize = 0;
             // 
             // left
             // 
@@ -153,6 +149,49 @@ namespace SE_ManagementSystem
             this.customerData.Size = new System.Drawing.Size(967, 586);
             this.customerData.TabIndex = 0;
             this.customerData.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.customerData_CellClick);
+            // 
+            // sNo
+            // 
+            this.sNo.HeaderText = "";
+            this.sNo.MinimumWidth = 6;
+            this.sNo.Name = "sNo";
+            this.sNo.ReadOnly = true;
+            this.sNo.Visible = false;
+            // 
+            // customerID
+            // 
+            this.customerID.HeaderText = "ID";
+            this.customerID.MinimumWidth = 6;
+            this.customerID.Name = "customerID";
+            this.customerID.ReadOnly = true;
+            // 
+            // customerName
+            // 
+            this.customerName.HeaderText = "Name";
+            this.customerName.MinimumWidth = 6;
+            this.customerName.Name = "customerName";
+            this.customerName.ReadOnly = true;
+            // 
+            // cusPass
+            // 
+            this.cusPass.HeaderText = "Password";
+            this.cusPass.MinimumWidth = 6;
+            this.cusPass.Name = "cusPass";
+            this.cusPass.ReadOnly = true;
+            // 
+            // customerAddress
+            // 
+            this.customerAddress.HeaderText = "Address";
+            this.customerAddress.MinimumWidth = 6;
+            this.customerAddress.Name = "customerAddress";
+            this.customerAddress.ReadOnly = true;
+            // 
+            // customerNum
+            // 
+            this.customerNum.HeaderText = "Mobile Number";
+            this.customerNum.MinimumWidth = 6;
+            this.customerNum.Name = "customerNum";
+            this.customerNum.ReadOnly = true;
             // 
             // customerIDL
             // 
@@ -299,49 +338,6 @@ namespace SE_ManagementSystem
             this.numErr.TabIndex = 16;
             this.numErr.Text = "*";
             this.numErr.Visible = false;
-            // 
-            // sNo
-            // 
-            this.sNo.HeaderText = "";
-            this.sNo.MinimumWidth = 6;
-            this.sNo.Name = "sNo";
-            this.sNo.ReadOnly = true;
-            this.sNo.Visible = false;
-            // 
-            // customerID
-            // 
-            this.customerID.HeaderText = "ID";
-            this.customerID.MinimumWidth = 6;
-            this.customerID.Name = "customerID";
-            this.customerID.ReadOnly = true;
-            // 
-            // customerName
-            // 
-            this.customerName.HeaderText = "Name";
-            this.customerName.MinimumWidth = 6;
-            this.customerName.Name = "customerName";
-            this.customerName.ReadOnly = true;
-            // 
-            // cusPass
-            // 
-            this.cusPass.HeaderText = "Password";
-            this.cusPass.MinimumWidth = 6;
-            this.cusPass.Name = "cusPass";
-            this.cusPass.ReadOnly = true;
-            // 
-            // customerAddress
-            // 
-            this.customerAddress.HeaderText = "Address";
-            this.customerAddress.MinimumWidth = 6;
-            this.customerAddress.Name = "customerAddress";
-            this.customerAddress.ReadOnly = true;
-            // 
-            // customerNum
-            // 
-            this.customerNum.HeaderText = "Mobile Number";
-            this.customerNum.MinimumWidth = 6;
-            this.customerNum.Name = "customerNum";
-            this.customerNum.ReadOnly = true;
             // 
             // AdminCustWin
             // 

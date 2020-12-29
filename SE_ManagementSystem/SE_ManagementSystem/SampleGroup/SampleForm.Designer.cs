@@ -59,13 +59,14 @@ namespace SE_ManagementSystem
             // 
             // welcomeText
             // 
-            this.welcomeText.Dock = System.Windows.Forms.DockStyle.Right;
+            this.welcomeText.Dock = System.Windows.Forms.DockStyle.Fill;
             this.welcomeText.Font = new System.Drawing.Font("Segoe UI Light", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.welcomeText.Location = new System.Drawing.Point(214, 0);
+            this.welcomeText.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.welcomeText.Location = new System.Drawing.Point(0, 0);
             this.welcomeText.Name = "welcomeText";
-            this.welcomeText.Size = new System.Drawing.Size(136, 72);
+            this.welcomeText.Size = new System.Drawing.Size(350, 72);
             this.welcomeText.TabIndex = 0;
-            this.welcomeText.Text = "Welcome,";
+            this.welcomeText.Text = "Welcome";
             this.welcomeText.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // right
@@ -111,6 +112,6 @@ namespace SE_ManagementSystem
         public System.Windows.Forms.Panel topLeft;
         public System.Windows.Forms.Panel right;
         public System.Windows.Forms.Panel topRight;
-        private System.Windows.Forms.Label welcomeText;
+        public System.Windows.Forms.Label welcomeText;
     }
 }

@@ -71,10 +71,6 @@ namespace SE_ManagementSystem
             // 
             this.searchText.Size = new System.Drawing.Size(151, 30);
             // 
-            // backBtn
-            // 
-            this.backBtn.FlatAppearance.BorderSize = 0;
-            // 
             // left
             // 
             this.left.Controls.Add(this.seDropDown);

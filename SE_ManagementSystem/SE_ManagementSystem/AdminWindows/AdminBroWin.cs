@@ -104,6 +104,12 @@ namespace SE_ManagementSystem
             }
         }
 
+        public override void backBtn_Click(object sender, EventArgs e)
+        {
+            AdminHomeWin adminHomeWin = new AdminHomeWin();
+            CentralControl.ShowWindow(adminHomeWin, this, MDI.ActiveForm);
+        }
+
         private void brokerDataSet_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex != -1 && e.ColumnIndex != -1)

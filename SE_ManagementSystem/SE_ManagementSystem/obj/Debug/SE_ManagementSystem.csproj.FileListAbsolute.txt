@@ -19,10 +19,8 @@ D:\Application Projects\SE_ManagementSystem\SE_ManagementSystem\obj\Debug\SE_Man
 D:\Application Projects\SE_ManagementSystem\SE_ManagementSystem\obj\Debug\SE_ManagementSystem.pdb
 D:\Application Projects\ApplicationProjects\SE_ManagementSystem\SE_ManagementSystem\bin\Debug\SE_ManagementSystem.exe
 D:\Application Projects\ApplicationProjects\SE_ManagementSystem\SE_ManagementSystem\bin\Debug\SE_ManagementSystem.pdb
-D:\Application Projects\ApplicationProjects\SE_ManagementSystem\SE_ManagementSystem\obj\Debug\SE_ManagementSystem.csprojAssemblyReference.cache
 D:\Application Projects\ApplicationProjects\SE_ManagementSystem\SE_ManagementSystem\obj\Debug\SE_ManagementSystem.AdminBroWin.resources
 D:\Application Projects\ApplicationProjects\SE_ManagementSystem\SE_ManagementSystem\obj\Debug\SE_ManagementSystem.AdminCustWin.resources
-D:\Application Projects\ApplicationProjects\SE_ManagementSystem\SE_ManagementSystem\obj\Debug\SE_ManagementSystem.AdminChartWin.resources
 D:\Application Projects\ApplicationProjects\SE_ManagementSystem\SE_ManagementSystem\obj\Debug\SE_ManagementSystem.AdminCompWin.resources
 D:\Application Projects\ApplicationProjects\SE_ManagementSystem\SE_ManagementSystem\obj\Debug\SE_ManagementSystem.AdminHomeWin.resources
 D:\Application Projects\ApplicationProjects\SE_ManagementSystem\SE_ManagementSystem\obj\Debug\SE_ManagementSystem.AdminShareholderWin.resources
@@ -31,7 +29,6 @@ D:\Application Projects\ApplicationProjects\SE_ManagementSystem\SE_ManagementSys
 D:\Application Projects\ApplicationProjects\SE_ManagementSystem\SE_ManagementSystem\obj\Debug\SE_ManagementSystem.LoginWin.resources
 D:\Application Projects\ApplicationProjects\SE_ManagementSystem\SE_ManagementSystem\obj\Debug\SE_ManagementSystem.MDI.resources
 D:\Application Projects\ApplicationProjects\SE_ManagementSystem\SE_ManagementSystem\obj\Debug\SE_ManagementSystem.Properties.Resources.resources
-D:\Application Projects\ApplicationProjects\SE_ManagementSystem\SE_ManagementSystem\obj\Debug\SE_ManagementSystem.SampleIntermediate.resources
 D:\Application Projects\ApplicationProjects\SE_ManagementSystem\SE_ManagementSystem\obj\Debug\SE_ManagementSystem.SampleForm.resources
 D:\Application Projects\ApplicationProjects\SE_ManagementSystem\SE_ManagementSystem\obj\Debug\SE_ManagementSystem.SecondSampleForm.resources
 D:\Application Projects\ApplicationProjects\SE_ManagementSystem\SE_ManagementSystem\obj\Debug\SE_ManagementSystem.SettingsWin.resources
@@ -39,3 +36,5 @@ D:\Application Projects\ApplicationProjects\SE_ManagementSystem\SE_ManagementSys
 D:\Application Projects\ApplicationProjects\SE_ManagementSystem\SE_ManagementSystem\obj\Debug\SE_ManagementSystem.csproj.CoreCompileInputs.cache
 D:\Application Projects\ApplicationProjects\SE_ManagementSystem\SE_ManagementSystem\obj\Debug\SE_ManagementSystem.exe
 D:\Application Projects\ApplicationProjects\SE_ManagementSystem\SE_ManagementSystem\obj\Debug\SE_ManagementSystem.pdb
+D:\Application Projects\ApplicationProjects\SE_ManagementSystem\SE_ManagementSystem\obj\Debug\SE_ManagementSystem.csprojAssemblyReference.cache
+D:\Application Projects\ApplicationProjects\SE_ManagementSystem\SE_ManagementSystem\obj\Debug\SE_ManagementSystem.Customer.CustHomeWin.resources

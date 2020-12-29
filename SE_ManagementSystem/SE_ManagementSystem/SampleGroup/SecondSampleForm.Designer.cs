@@ -30,26 +30,24 @@ namespace SE_ManagementSystem
         private void InitializeComponent()
         {
             this.middleLeft = new System.Windows.Forms.Panel();
+            this.backBtn = new System.Windows.Forms.Button();
             this.middleRight = new System.Windows.Forms.Panel();
             this.menuOptions = new System.Windows.Forms.TableLayoutPanel();
+            this.viewBtn = new System.Windows.Forms.Button();
             this.deleteBtn = new System.Windows.Forms.Button();
             this.saveBtn = new System.Windows.Forms.Button();
             this.editBtn = new System.Windows.Forms.Button();
             this.addBtn = new System.Windows.Forms.Button();
             this.searchGroup = new System.Windows.Forms.GroupBox();
             this.searchText = new System.Windows.Forms.TextBox();
-            this.viewBtn = new System.Windows.Forms.Button();
             this.left.SuspendLayout();
             this.topLeft.SuspendLayout();
             this.right.SuspendLayout();
+            this.middleLeft.SuspendLayout();
             this.middleRight.SuspendLayout();
             this.menuOptions.SuspendLayout();
             this.searchGroup.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // backBtn
-            // 
-            this.backBtn.FlatAppearance.BorderSize = 0;
             // 
             // left
             // 
@@ -71,11 +69,25 @@ namespace SE_ManagementSystem
             // 
             // middleLeft
             // 
+            this.middleLeft.Controls.Add(this.backBtn);
             this.middleLeft.Dock = System.Windows.Forms.DockStyle.Top;
             this.middleLeft.Location = new System.Drawing.Point(0, 72);
             this.middleLeft.Name = "middleLeft";
             this.middleLeft.Size = new System.Drawing.Size(350, 70);
             this.middleLeft.TabIndex = 1;
+            // 
+            // backBtn
+            // 
+            this.backBtn.BackgroundImage = global::SE_ManagementSystem.Properties.Resources._064_Back;
+            this.backBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.backBtn.FlatAppearance.BorderSize = 0;
+            this.backBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.backBtn.Location = new System.Drawing.Point(0, 3);
+            this.backBtn.Name = "backBtn";
+            this.backBtn.Size = new System.Drawing.Size(71, 67);
+            this.backBtn.TabIndex = 0;
+            this.backBtn.UseVisualStyleBackColor = true;
+            this.backBtn.Click += new System.EventHandler(this.backBtn_Click);
             // 
             // middleRight
             // 
@@ -108,6 +120,19 @@ namespace SE_ManagementSystem
             this.menuOptions.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.menuOptions.Size = new System.Drawing.Size(830, 70);
             this.menuOptions.TabIndex = 0;
+            // 
+            // viewBtn
+            // 
+            this.viewBtn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.viewBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.viewBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.viewBtn.Location = new System.Drawing.Point(141, 3);
+            this.viewBtn.Name = "viewBtn";
+            this.viewBtn.Size = new System.Drawing.Size(132, 64);
+            this.viewBtn.TabIndex = 5;
+            this.viewBtn.Text = "&View";
+            this.viewBtn.UseVisualStyleBackColor = true;
+            this.viewBtn.Click += new System.EventHandler(this.viewBtn_Click);
             // 
             // deleteBtn
             // 
@@ -184,19 +209,6 @@ namespace SE_ManagementSystem
             this.searchText.TabIndex = 0;
             this.searchText.TextChanged += new System.EventHandler(this.searchText_TextChanged);
             // 
-            // viewBtn
-            // 
-            this.viewBtn.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.viewBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.viewBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.viewBtn.Location = new System.Drawing.Point(141, 3);
-            this.viewBtn.Name = "viewBtn";
-            this.viewBtn.Size = new System.Drawing.Size(132, 64);
-            this.viewBtn.TabIndex = 5;
-            this.viewBtn.Text = "&View";
-            this.viewBtn.UseVisualStyleBackColor = true;
-            this.viewBtn.Click += new System.EventHandler(this.viewBtn_Click);
-            // 
             // SecondSampleForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
@@ -206,6 +218,7 @@ namespace SE_ManagementSystem
             this.left.ResumeLayout(false);
             this.topLeft.ResumeLayout(false);
             this.right.ResumeLayout(false);
+            this.middleLeft.ResumeLayout(false);
             this.middleRight.ResumeLayout(false);
             this.menuOptions.ResumeLayout(false);
             this.searchGroup.ResumeLayout(false);
@@ -226,5 +239,6 @@ namespace SE_ManagementSystem
         protected System.Windows.Forms.GroupBox searchGroup;
         protected System.Windows.Forms.TextBox searchText;
         protected System.Windows.Forms.Button viewBtn;
+        protected System.Windows.Forms.Button backBtn;
     }
 }

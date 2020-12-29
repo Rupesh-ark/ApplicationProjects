@@ -31,11 +31,11 @@ namespace SE_ManagementSystem
         {
             this.adminMenu = new System.Windows.Forms.TableLayoutPanel();
             this.stocks = new System.Windows.Forms.Button();
-            this.companies = new System.Windows.Forms.Button();
-            this.brokers = new System.Windows.Forms.Button();
             this.transactions = new System.Windows.Forms.Button();
+            this.companies = new System.Windows.Forms.Button();
             this.customers = new System.Windows.Forms.Button();
             this.shareholders = new System.Windows.Forms.Button();
+            this.brokers = new System.Windows.Forms.Button();
             this.left.SuspendLayout();
             this.right.SuspendLayout();
             this.adminMenu.SuspendLayout();
@@ -95,40 +95,6 @@ namespace SE_ManagementSystem
             this.stocks.UseVisualStyleBackColor = true;
             this.stocks.Click += new System.EventHandler(this.stocks_Click);
             // 
-            // companies
-            // 
-            this.companies.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.companies.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.companies.FlatAppearance.BorderSize = 2;
-            this.companies.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Cyan;
-            this.companies.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.companies.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.companies.ForeColor = System.Drawing.Color.Azure;
-            this.companies.Location = new System.Drawing.Point(3, 253);
-            this.companies.Name = "companies";
-            this.companies.Size = new System.Drawing.Size(305, 244);
-            this.companies.TabIndex = 3;
-            this.companies.Text = "Companies";
-            this.companies.UseVisualStyleBackColor = true;
-            this.companies.Click += new System.EventHandler(this.companies_Click);
-            // 
-            // brokers
-            // 
-            this.brokers.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.brokers.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.brokers.FlatAppearance.BorderSize = 2;
-            this.brokers.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Cyan;
-            this.brokers.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.brokers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.brokers.ForeColor = System.Drawing.Color.Azure;
-            this.brokers.Location = new System.Drawing.Point(625, 3);
-            this.brokers.Name = "brokers";
-            this.brokers.Size = new System.Drawing.Size(306, 244);
-            this.brokers.TabIndex = 1;
-            this.brokers.Text = "Brokers";
-            this.brokers.UseVisualStyleBackColor = true;
-            this.brokers.Click += new System.EventHandler(this.brokers_Click);
-            // 
             // transactions
             // 
             this.transactions.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -146,6 +112,26 @@ namespace SE_ManagementSystem
             this.transactions.UseVisualStyleBackColor = true;
             this.transactions.Click += new System.EventHandler(this.transactions_Click);
             // 
+            // companies
+            // 
+            this.companies.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.companies.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.companies.FlatAppearance.BorderSize = 2;
+            this.companies.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Cyan;
+            this.companies.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.companies.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.companies.ForeColor = System.Drawing.Color.Azure;
+            this.companies.Image = global::SE_ManagementSystem.Properties.Resources._357_home;
+            this.companies.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.companies.Location = new System.Drawing.Point(3, 253);
+            this.companies.Name = "companies";
+            this.companies.Size = new System.Drawing.Size(305, 244);
+            this.companies.TabIndex = 3;
+            this.companies.Text = "Companies";
+            this.companies.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.companies.UseVisualStyleBackColor = true;
+            this.companies.Click += new System.EventHandler(this.companies_Click);
+            // 
             // customers
             // 
             this.customers.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -155,11 +141,14 @@ namespace SE_ManagementSystem
             this.customers.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.customers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.customers.ForeColor = System.Drawing.Color.Azure;
+            this.customers.Image = global::SE_ManagementSystem.Properties.Resources._369_user1;
+            this.customers.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.customers.Location = new System.Drawing.Point(3, 3);
             this.customers.Name = "customers";
             this.customers.Size = new System.Drawing.Size(305, 244);
             this.customers.TabIndex = 0;
             this.customers.Text = "Customers";
+            this.customers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.customers.UseVisualStyleBackColor = true;
             this.customers.Click += new System.EventHandler(this.customers_Click);
             // 
@@ -171,13 +160,36 @@ namespace SE_ManagementSystem
             this.shareholders.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Cyan;
             this.shareholders.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.shareholders.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.shareholders.Image = global::SE_ManagementSystem.Properties.Resources._366_user;
+            this.shareholders.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.shareholders.Location = new System.Drawing.Point(314, 3);
             this.shareholders.Name = "shareholders";
             this.shareholders.Size = new System.Drawing.Size(305, 244);
             this.shareholders.TabIndex = 6;
             this.shareholders.Text = "ShareHolders";
+            this.shareholders.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.shareholders.UseVisualStyleBackColor = true;
             this.shareholders.Click += new System.EventHandler(this.shareholders_Click);
+            // 
+            // brokers
+            // 
+            this.brokers.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.brokers.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.brokers.FlatAppearance.BorderSize = 2;
+            this.brokers.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Cyan;
+            this.brokers.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.brokers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.brokers.ForeColor = System.Drawing.Color.Azure;
+            this.brokers.Image = global::SE_ManagementSystem.Properties.Resources._367_user1;
+            this.brokers.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.brokers.Location = new System.Drawing.Point(625, 3);
+            this.brokers.Name = "brokers";
+            this.brokers.Size = new System.Drawing.Size(306, 244);
+            this.brokers.TabIndex = 1;
+            this.brokers.Text = "Brokers";
+            this.brokers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.brokers.UseVisualStyleBackColor = true;
+            this.brokers.Click += new System.EventHandler(this.brokers_Click);
             // 
             // AdminHomeWin
             // 

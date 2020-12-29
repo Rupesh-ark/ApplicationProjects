@@ -137,5 +137,10 @@ namespace SE_ManagementSystem
 
             }
         }
+        public override void backBtn_Click(object sender, EventArgs e)
+        {
+            AdminHomeWin adminHomeWin = new AdminHomeWin();
+            CentralControl.ShowWindow(adminHomeWin, this, MDI.ActiveForm);
+        }
     }
 }

@@ -37,5 +37,11 @@ namespace SE_ManagementSystem
                  CentralControl.ShowWindow(loginInstance, this);
             }
         }
+
+        private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LoginWin loginInstance = new LoginWin();
+            CentralControl.ShowWindow(loginInstance, this);
+        }
     }
 }

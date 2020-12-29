@@ -56,10 +56,12 @@ namespace SE_ManagementSystem
             this.holdingQuantityL = new System.Windows.Forms.Label();
             this.holdingsQuantityTxt = new System.Windows.Forms.TextBox();
             this.quantityErr = new System.Windows.Forms.Label();
+            this.detailsGroup = new System.Windows.Forms.GroupBox();
             this.left.SuspendLayout();
             this.topLeft.SuspendLayout();
             this.right.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.stockDataSet)).BeginInit();
+            this.detailsGroup.SuspendLayout();
             this.SuspendLayout();
             // 
             // middleRight
@@ -69,10 +71,6 @@ namespace SE_ManagementSystem
             // searchText
             // 
             this.searchText.Size = new System.Drawing.Size(143, 30);
-            // 
-            // backBtn
-            // 
-            this.backBtn.FlatAppearance.BorderSize = 0;
             // 
             // left
             // 
@@ -118,11 +116,11 @@ namespace SE_ManagementSystem
             // 
             // right
             // 
-            this.right.Controls.Add(this.stockDataSet);
+            this.right.Controls.Add(this.detailsGroup);
             this.right.Size = new System.Drawing.Size(925, 747);
             this.right.Controls.SetChildIndex(this.topRight, 0);
             this.right.Controls.SetChildIndex(this.middleRight, 0);
-            this.right.Controls.SetChildIndex(this.stockDataSet, 0);
+            this.right.Controls.SetChildIndex(this.detailsGroup, 0);
             // 
             // topRight
             // 
@@ -145,12 +143,12 @@ namespace SE_ManagementSystem
             this.holdingsCost,
             this.holdingsQuantity});
             this.stockDataSet.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.stockDataSet.Location = new System.Drawing.Point(0, 142);
+            this.stockDataSet.Location = new System.Drawing.Point(3, 26);
             this.stockDataSet.Name = "stockDataSet";
             this.stockDataSet.ReadOnly = true;
             this.stockDataSet.RowHeadersWidth = 51;
             this.stockDataSet.RowTemplate.Height = 24;
-            this.stockDataSet.Size = new System.Drawing.Size(925, 605);
+            this.stockDataSet.Size = new System.Drawing.Size(919, 576);
             this.stockDataSet.TabIndex = 2;
             this.stockDataSet.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.stockDataSet_CellClick);
             // 
@@ -366,11 +364,11 @@ namespace SE_ManagementSystem
             this.holdingQuantityL.TabIndex = 45;
             this.holdingQuantityL.Text = "Holdings Quantity";
             // 
-            // holdingQuantityTxt
+            // holdingsQuantityTxt
             // 
             this.holdingsQuantityTxt.Enabled = false;
             this.holdingsQuantityTxt.Location = new System.Drawing.Point(16, 586);
-            this.holdingsQuantityTxt.Name = "holdingQuantityTxt";
+            this.holdingsQuantityTxt.Name = "holdingsQuantityTxt";
             this.holdingsQuantityTxt.Size = new System.Drawing.Size(313, 30);
             this.holdingsQuantityTxt.TabIndex = 46;
             this.holdingsQuantityTxt.TextChanged += new System.EventHandler(this.holdingQuantityTxt_TextChanged);
@@ -386,6 +384,18 @@ namespace SE_ManagementSystem
             this.quantityErr.Text = "*";
             this.quantityErr.Visible = false;
             // 
+            // detailsGroup
+            // 
+            this.detailsGroup.Controls.Add(this.stockDataSet);
+            this.detailsGroup.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.detailsGroup.ForeColor = System.Drawing.Color.Cyan;
+            this.detailsGroup.Location = new System.Drawing.Point(0, 142);
+            this.detailsGroup.Name = "detailsGroup";
+            this.detailsGroup.Size = new System.Drawing.Size(925, 605);
+            this.detailsGroup.TabIndex = 3;
+            this.detailsGroup.TabStop = false;
+            this.detailsGroup.Text = "Details";
+            // 
             // AdminStockWin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
@@ -399,6 +409,7 @@ namespace SE_ManagementSystem
             this.topLeft.ResumeLayout(false);
             this.right.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.stockDataSet)).EndInit();
+            this.detailsGroup.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -432,5 +443,6 @@ namespace SE_ManagementSystem
         private System.Windows.Forms.DataGridViewTextBoxColumn volume;
         private System.Windows.Forms.DataGridViewTextBoxColumn holdingsCost;
         private System.Windows.Forms.DataGridViewTextBoxColumn holdingsQuantity;
+        private System.Windows.Forms.GroupBox detailsGroup;
     }
 }

@@ -20,6 +20,7 @@ namespace SE_ManagementSystem
         private void login_Click(object sender, EventArgs e)
         {
             CentralControl.ShowAstrError(passwordText, passErr);
+            CentralControl.ShowAstrError(usernameText, usernameErr);
             AdminHomeWin adminHomeWin = new AdminHomeWin();
             if(usernameErr.Visible|| passErr.Visible)
             {
@@ -31,7 +32,6 @@ namespace SE_ManagementSystem
                 {
                     CentralControl.ShowWindow(adminHomeWin, this, MDI.ActiveForm);
                 }
-                
             }
                 
         }

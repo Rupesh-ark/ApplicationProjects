@@ -168,6 +168,7 @@ namespace SE_ManagementSystem
                     CentralControl.ShowMSG("Invalid username & password", "Error");
                     status = false;
                 }
+                CentralControl.con.Close();
             }
             catch (Exception ex)
             {

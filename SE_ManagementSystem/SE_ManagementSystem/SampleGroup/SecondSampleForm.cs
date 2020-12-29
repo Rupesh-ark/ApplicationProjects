@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace SE_ManagementSystem
 {
-    public partial class SecondSampleForm : SampleIntermediate
+    public partial class SecondSampleForm : SampleForm
     {
         public SecondSampleForm()
         {
@@ -51,6 +51,11 @@ namespace SE_ManagementSystem
         public virtual void viewBtn_Click(object sender, EventArgs e)
         {
 
+        }
+
+        public virtual void backBtn_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

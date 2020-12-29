@@ -1,7 +1,7 @@
 ﻿
-namespace SE_ManagementSystem
+namespace SE_ManagementSystem.Customer
 {
-    partial class SampleIntermediate
+    partial class CustHomeWin
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,6 @@ namespace SE_ManagementSystem
         /// </summary>
         private void InitializeComponent()
         {
-            this.backBtn = new System.Windows.Forms.Button();
             this.left.SuspendLayout();
             this.topLeft.SuspendLayout();
             this.right.SuspendLayout();
@@ -37,40 +36,23 @@ namespace SE_ManagementSystem
             // 
             // left
             // 
-            this.left.Size = new System.Drawing.Size(350, 566);
-            // 
-            // topLeft
-            // 
-            this.topLeft.Controls.Add(this.backBtn);
-            this.topLeft.Controls.SetChildIndex(this.backBtn, 0);
+            this.left.Size = new System.Drawing.Size(350, 642);
             // 
             // right
             // 
-            this.right.Size = new System.Drawing.Size(565, 566);
+            this.right.Size = new System.Drawing.Size(924, 642);
             // 
             // topRight
             // 
-            this.topRight.Size = new System.Drawing.Size(565, 72);
+            this.topRight.Size = new System.Drawing.Size(924, 72);
             // 
-            // backBtn
-            // 
-            this.backBtn.BackgroundImage = global::SE_ManagementSystem.Properties.Resources._064_Back;
-            this.backBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.backBtn.FlatAppearance.BorderSize = 0;
-            this.backBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.backBtn.Location = new System.Drawing.Point(12, 12);
-            this.backBtn.Name = "backBtn";
-            this.backBtn.Size = new System.Drawing.Size(50, 50);
-            this.backBtn.TabIndex = 1;
-            this.backBtn.UseVisualStyleBackColor = true;
-            this.backBtn.Click += new System.EventHandler(this.backBtn_Click);
-            // 
-            // SampleIntermediate
+            // CustHomeWin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(915, 566);
-            this.Name = "SampleIntermediate";
+            this.ClientSize = new System.Drawing.Size(1274, 642);
+            this.Name = "CustHomeWin";
+            this.Text = "CustHomeWin";
             this.left.ResumeLayout(false);
             this.topLeft.ResumeLayout(false);
             this.right.ResumeLayout(false);
@@ -79,7 +61,5 @@ namespace SE_ManagementSystem
         }
 
         #endregion
-
-        public System.Windows.Forms.Button backBtn;
     }
 }

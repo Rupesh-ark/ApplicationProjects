@@ -60,12 +60,6 @@
     <Compile Include="AdminWindows\AdminBroWin.Designer.cs">
       <DependentUpon>AdminBroWin.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdminWindows\AdminChartWin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AdminWindows\AdminChartWin.Designer.cs">
-      <DependentUpon>AdminChartWin.cs</DependentUpon>
-    </Compile>
     <Compile Include="AdminWindows\AdminCompWin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,6 +93,12 @@
     <Compile Include="Classes\CentralControl.cs" />
     <Compile Include="Classes\Deletion.cs" />
     <Compile Include="Classes\Insertion.cs" />
+    <Compile Include="Customer\CustHomeWin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer\CustHomeWin.Designer.cs">
+      <DependentUpon>CustHomeWin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login_Settings\LoginWin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,12 +114,6 @@
     <Compile Include="Classes\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Classes\Retrival.cs" />
-    <Compile Include="SampleGroup\SampleIntermediate.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SampleGroup\SampleIntermediate.Designer.cs">
-      <DependentUpon>SampleIntermediate.cs</DependentUpon>
-    </Compile>
     <Compile Include="SampleGroup\SampleForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,9 +139,6 @@
     <EmbeddedResource Include="AdminWindows\AdminCustWin.resx">
       <DependentUpon>AdminCustWin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AdminWindows\AdminChartWin.resx">
-      <DependentUpon>AdminChartWin.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="AdminWindows\AdminCompWin.resx">
       <DependentUpon>AdminCompWin.cs</DependentUpon>
     </EmbeddedResource>
@@ -162,6 +153,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AdminWindows\AdminTransWin.resx">
       <DependentUpon>AdminTransWin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer\CustHomeWin.resx">
+      <DependentUpon>CustHomeWin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login_Settings\LoginWin.resx">
       <DependentUpon>LoginWin.cs</DependentUpon>
@@ -179,9 +173,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="SampleGroup\SampleIntermediate.resx">
-      <DependentUpon>SampleIntermediate.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="SampleGroup\SampleForm.resx">
       <DependentUpon>SampleForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -206,6 +197,33 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="assests\backgrounds\LoginBack2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assests\icons\360-users.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assests\icons\092-network.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assests\icons\367-user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assests\icons\369-user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\369-user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\366-user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\367-user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\357-home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assests\icons\370-locked.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

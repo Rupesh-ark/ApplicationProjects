@@ -42,10 +42,6 @@ namespace SE_ManagementSystem
             // 
             this.searchText.Size = new System.Drawing.Size(127, 30);
             // 
-            // backBtn
-            // 
-            this.backBtn.FlatAppearance.BorderSize = 0;
-            // 
             // left
             // 
             this.left.Size = new System.Drawing.Size(350, 653);

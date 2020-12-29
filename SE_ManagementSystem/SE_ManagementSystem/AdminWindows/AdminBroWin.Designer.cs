@@ -51,10 +51,12 @@ namespace SE_ManagementSystem
             this.commision = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.seName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.seErr = new System.Windows.Forms.Label();
+            this.detailsGroup = new System.Windows.Forms.GroupBox();
             this.left.SuspendLayout();
             this.topLeft.SuspendLayout();
             this.right.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.brokerDataSet)).BeginInit();
+            this.detailsGroup.SuspendLayout();
             this.SuspendLayout();
             // 
             // middleRight
@@ -64,10 +66,6 @@ namespace SE_ManagementSystem
             // searchText
             // 
             this.searchText.Size = new System.Drawing.Size(125, 30);
-            // 
-            // backBtn
-            // 
-            this.backBtn.FlatAppearance.BorderSize = 0;
             // 
             // left
             // 
@@ -107,11 +105,11 @@ namespace SE_ManagementSystem
             // 
             // right
             // 
-            this.right.Controls.Add(this.brokerDataSet);
+            this.right.Controls.Add(this.detailsGroup);
             this.right.Size = new System.Drawing.Size(807, 720);
             this.right.Controls.SetChildIndex(this.topRight, 0);
             this.right.Controls.SetChildIndex(this.middleRight, 0);
-            this.right.Controls.SetChildIndex(this.brokerDataSet, 0);
+            this.right.Controls.SetChildIndex(this.detailsGroup, 0);
             // 
             // topRight
             // 
@@ -268,12 +266,12 @@ namespace SE_ManagementSystem
             this.commision,
             this.seName});
             this.brokerDataSet.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.brokerDataSet.Location = new System.Drawing.Point(0, 142);
+            this.brokerDataSet.Location = new System.Drawing.Point(3, 26);
             this.brokerDataSet.Name = "brokerDataSet";
             this.brokerDataSet.ReadOnly = true;
             this.brokerDataSet.RowHeadersWidth = 51;
             this.brokerDataSet.RowTemplate.Height = 24;
-            this.brokerDataSet.Size = new System.Drawing.Size(807, 578);
+            this.brokerDataSet.Size = new System.Drawing.Size(801, 549);
             this.brokerDataSet.TabIndex = 2;
             this.brokerDataSet.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.brokerDataSet_CellClick);
             // 
@@ -331,6 +329,18 @@ namespace SE_ManagementSystem
             this.seErr.Text = "*";
             this.seErr.Visible = false;
             // 
+            // detailsGroup
+            // 
+            this.detailsGroup.Controls.Add(this.brokerDataSet);
+            this.detailsGroup.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.detailsGroup.ForeColor = System.Drawing.Color.Cyan;
+            this.detailsGroup.Location = new System.Drawing.Point(0, 142);
+            this.detailsGroup.Name = "detailsGroup";
+            this.detailsGroup.Size = new System.Drawing.Size(807, 578);
+            this.detailsGroup.TabIndex = 3;
+            this.detailsGroup.TabStop = false;
+            this.detailsGroup.Text = "Details";
+            // 
             // AdminBroWin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
@@ -344,6 +354,7 @@ namespace SE_ManagementSystem
             this.topLeft.ResumeLayout(false);
             this.right.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.brokerDataSet)).EndInit();
+            this.detailsGroup.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -372,5 +383,6 @@ namespace SE_ManagementSystem
         private System.Windows.Forms.DataGridViewTextBoxColumn password;
         private System.Windows.Forms.DataGridViewTextBoxColumn commision;
         private System.Windows.Forms.DataGridViewTextBoxColumn seName;
+        private System.Windows.Forms.GroupBox detailsGroup;
     }
 }
