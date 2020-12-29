@@ -83,6 +83,46 @@ namespace SE_ManagementSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _144_television {
+            get {
+                object obj = ResourceManager.GetObject("144-television", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _155_id_card {
+            get {
+                object obj = ResourceManager.GetObject("155-id card", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _21_512 {
+            get {
+                object obj = ResourceManager.GetObject("21-512", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _21_5121 {
+            get {
+                object obj = ResourceManager.GetObject("21-5121", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _357_home {
             get {
                 object obj = ResourceManager.GetObject("357-home", resourceCulture);
@@ -163,9 +203,70 @@ namespace SE_ManagementSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _7197611 {
+            get {
+                object obj = ResourceManager.GetObject("7197611", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap general_pack_NEW_glyph_profile_512 {
+            get {
+                object obj = ResourceManager.GetObject("general_pack_NEW_glyph_profile-512", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap kisspng_computer_icons_scalable_vector_graphics_portable_n_5c18b6ce2017d1_0359504915451235341315 {
+            get {
+                object obj = ResourceManager.GetObject("kisspng-computer-icons-scalable-vector-graphics-portable-n-5c18b6ce2017d1.0359504" +
+                        "915451235341315", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap kisspng_computer_icons_scalable_vector_graphics_portable_n_5c18b6ce2017d11 {
+            get {
+                object obj = ResourceManager.GetObject("kisspng-computer-icons-scalable-vector-graphics-portable-n-5c18b6ce2017d11", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap kisspng_computer_icons_scalable_vector_graphics_portable_n_5c18b6ce2017d12 {
+            get {
+                object obj = ResourceManager.GetObject("kisspng-computer-icons-scalable-vector-graphics-portable-n-5c18b6ce2017d12", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap LoginBack2 {
             get {
                 object obj = ResourceManager.GetObject("LoginBack2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap unnamed {
+            get {
+                object obj = ResourceManager.GetObject("unnamed", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

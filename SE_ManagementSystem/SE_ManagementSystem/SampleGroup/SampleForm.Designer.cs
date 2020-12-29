@@ -41,6 +41,7 @@ namespace SE_ManagementSystem
             // 
             // left
             // 
+            this.left.BackgroundImage = global::SE_ManagementSystem.Properties.Resources.unnamed;
             this.left.Controls.Add(this.topLeft);
             this.left.Dock = System.Windows.Forms.DockStyle.Left;
             this.left.Location = new System.Drawing.Point(0, 0);
@@ -61,6 +62,8 @@ namespace SE_ManagementSystem
             // 
             this.welcomeText.Dock = System.Windows.Forms.DockStyle.Fill;
             this.welcomeText.Font = new System.Drawing.Font("Segoe UI Light", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.welcomeText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.welcomeText.Image = global::SE_ManagementSystem.Properties.Resources.unnamed;
             this.welcomeText.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.welcomeText.Location = new System.Drawing.Point(0, 0);
             this.welcomeText.Name = "welcomeText";

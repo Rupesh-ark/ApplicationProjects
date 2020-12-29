@@ -99,6 +99,24 @@
     <Compile Include="Customer\CustHomeWin.Designer.cs">
       <DependentUpon>CustHomeWin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Customer\CustOrderWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer\CustOrderWindow.Designer.cs">
+      <DependentUpon>CustOrderWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\CustPfpWin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer\CustPfpWin.Designer.cs">
+      <DependentUpon>CustPfpWin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\CustStockWin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer\CustStockWin.Designer.cs">
+      <DependentUpon>CustStockWin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login_Settings\LoginWin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -156,6 +174,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Customer\CustHomeWin.resx">
       <DependentUpon>CustHomeWin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer\CustPfpWin.resx">
+      <DependentUpon>CustPfpWin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer\CustStockWin.resx">
+      <DependentUpon>CustStockWin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login_Settings\LoginWin.resx">
       <DependentUpon>LoginWin.cs</DependentUpon>
@@ -224,6 +248,36 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="assests\icons\370-locked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assests\icons\155-id card.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\21-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\21-5121.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assests\icons\144-television.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\general_pack_NEW_glyph_profile-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kisspng-computer-icons-scalable-vector-graphics-portable-n-5c18b6ce2017d1.0359504915451235341315.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kisspng-computer-icons-scalable-vector-graphics-portable-n-5c18b6ce2017d1.0359504915451235341315.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kisspng-computer-icons-scalable-vector-graphics-portable-n-5c18b6ce2017d1.03595049154512353413151.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\unnamed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7197611.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

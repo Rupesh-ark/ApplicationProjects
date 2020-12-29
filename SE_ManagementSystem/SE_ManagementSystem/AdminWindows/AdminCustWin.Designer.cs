@@ -52,12 +52,17 @@ namespace SE_ManagementSystem
             this.passErr = new System.Windows.Forms.Label();
             this.AddErr = new System.Windows.Forms.Label();
             this.numErr = new System.Windows.Forms.Label();
+            this.middleLeft.SuspendLayout();
             this.left.SuspendLayout();
             this.topLeft.SuspendLayout();
             this.right.SuspendLayout();
             this.detailsGroup.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.customerData)).BeginInit();
             this.SuspendLayout();
+            // 
+            // middleLeft
+            // 
+            this.middleLeft.BackgroundImage = global::SE_ManagementSystem.Properties.Resources.unnamed;
             // 
             // middleRight
             // 
@@ -66,6 +71,10 @@ namespace SE_ManagementSystem
             // searchText
             // 
             this.searchText.Size = new System.Drawing.Size(151, 30);
+            // 
+            // backBtn
+            // 
+            this.backBtn.FlatAppearance.BorderSize = 0;
             // 
             // left
             // 
@@ -346,6 +355,7 @@ namespace SE_ManagementSystem
             this.ClientSize = new System.Drawing.Size(1323, 757);
             this.Name = "AdminCustWin";
             this.Text = "AdminCustWin";
+            this.middleLeft.ResumeLayout(false);
             this.left.ResumeLayout(false);
             this.left.PerformLayout();
             this.topLeft.ResumeLayout(false);

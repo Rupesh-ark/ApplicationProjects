@@ -38,12 +38,11 @@ namespace SE_ManagementSystem
             this.passErr = new System.Windows.Forms.Label();
             this.bottomLogo = new System.Windows.Forms.PictureBox();
             this.users = new System.Windows.Forms.PictureBox();
-            this.background = new System.Windows.Forms.PictureBox();
             this.left.SuspendLayout();
+            this.topLeft.SuspendLayout();
             this.right.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bottomLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.users)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.background)).BeginInit();
             this.SuspendLayout();
             // 
             // left
@@ -71,13 +70,12 @@ namespace SE_ManagementSystem
             // 
             // right
             // 
-            this.right.Controls.Add(this.background);
+            this.right.BackgroundImage = global::SE_ManagementSystem.Properties.Resources._7197611;
             this.right.Size = new System.Drawing.Size(1552, 1033);
-            this.right.Controls.SetChildIndex(this.topRight, 0);
-            this.right.Controls.SetChildIndex(this.background, 0);
             // 
             // topRight
             // 
+            this.topRight.BackgroundImage = global::SE_ManagementSystem.Properties.Resources._7197611;
             this.topRight.Size = new System.Drawing.Size(1552, 72);
             // 
             // usernameL
@@ -154,6 +152,7 @@ namespace SE_ManagementSystem
             // 
             // bottomLogo
             // 
+            this.bottomLogo.BackgroundImage = global::SE_ManagementSystem.Properties.Resources.unnamed;
             this.bottomLogo.Image = global::SE_ManagementSystem.Properties.Resources._092_network;
             this.bottomLogo.Location = new System.Drawing.Point(0, 478);
             this.bottomLogo.Name = "bottomLogo";
@@ -164,6 +163,7 @@ namespace SE_ManagementSystem
             // 
             // users
             // 
+            this.users.BackgroundImage = global::SE_ManagementSystem.Properties.Resources.unnamed;
             this.users.Image = global::SE_ManagementSystem.Properties.Resources._360_users;
             this.users.Location = new System.Drawing.Point(40, 72);
             this.users.Name = "users";
@@ -171,17 +171,6 @@ namespace SE_ManagementSystem
             this.users.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.users.TabIndex = 8;
             this.users.TabStop = false;
-            // 
-            // background
-            // 
-            this.background.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.background.Image = global::SE_ManagementSystem.Properties.Resources.LoginBack2;
-            this.background.Location = new System.Drawing.Point(0, 72);
-            this.background.Name = "background";
-            this.background.Size = new System.Drawing.Size(1552, 961);
-            this.background.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.background.TabIndex = 1;
-            this.background.TabStop = false;
             // 
             // LoginWin
             // 
@@ -193,10 +182,10 @@ namespace SE_ManagementSystem
             this.Text = "Login";
             this.left.ResumeLayout(false);
             this.left.PerformLayout();
+            this.topLeft.ResumeLayout(false);
             this.right.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bottomLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.users)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.background)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -208,7 +197,6 @@ namespace SE_ManagementSystem
         private System.Windows.Forms.Label passwordL;
         private System.Windows.Forms.TextBox usernameText;
         private System.Windows.Forms.Label usernameL;
-        private System.Windows.Forms.PictureBox background;
         private System.Windows.Forms.Label passErr;
         private System.Windows.Forms.Label usernameErr;
         private System.Windows.Forms.PictureBox users;

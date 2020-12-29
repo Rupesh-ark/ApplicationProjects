@@ -33,7 +33,6 @@ namespace SE_ManagementSystem
                     CentralControl.ShowWindow(adminHomeWin, this, MDI.ActiveForm);
                 }
             }
-                
         }
 
         private void passwordText_TextChanged(object sender, EventArgs e)

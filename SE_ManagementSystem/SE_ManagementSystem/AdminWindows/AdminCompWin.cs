@@ -58,7 +58,7 @@ namespace SE_ManagementSystem
                 {
                     Deletion.DeleteData("spDeleteCompany", "@companyID", companyIDTxt.Text);
                     CentralControl.ChangeStateReset(left, false);
-                    Retrival.GetCustomers(companyDetails, companyID, companyName, companyType, marketCapital, yearEstablished);
+                    Retrival.GetCompanies(companyDetails, companyID, companyName, companyType, marketCapital, yearEstablished, seName);
                 }
             }
         }

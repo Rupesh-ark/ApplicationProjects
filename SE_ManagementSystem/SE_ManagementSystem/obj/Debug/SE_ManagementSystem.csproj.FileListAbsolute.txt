@@ -36,5 +36,6 @@ D:\Application Projects\ApplicationProjects\SE_ManagementSystem\SE_ManagementSys
 D:\Application Projects\ApplicationProjects\SE_ManagementSystem\SE_ManagementSystem\obj\Debug\SE_ManagementSystem.csproj.CoreCompileInputs.cache
 D:\Application Projects\ApplicationProjects\SE_ManagementSystem\SE_ManagementSystem\obj\Debug\SE_ManagementSystem.exe
 D:\Application Projects\ApplicationProjects\SE_ManagementSystem\SE_ManagementSystem\obj\Debug\SE_ManagementSystem.pdb
-D:\Application Projects\ApplicationProjects\SE_ManagementSystem\SE_ManagementSystem\obj\Debug\SE_ManagementSystem.csprojAssemblyReference.cache
 D:\Application Projects\ApplicationProjects\SE_ManagementSystem\SE_ManagementSystem\obj\Debug\SE_ManagementSystem.Customer.CustHomeWin.resources
+D:\Application Projects\ApplicationProjects\SE_ManagementSystem\SE_ManagementSystem\obj\Debug\SE_ManagementSystem.Customer.CustPfpWin.resources
+D:\Application Projects\ApplicationProjects\SE_ManagementSystem\SE_ManagementSystem\obj\Debug\SE_ManagementSystem.Customer.CustStockWin.resources
