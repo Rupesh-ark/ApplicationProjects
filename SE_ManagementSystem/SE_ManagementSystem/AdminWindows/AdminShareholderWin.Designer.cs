@@ -38,16 +38,9 @@ namespace SE_ManagementSystem
             this.searchGroup = new System.Windows.Forms.GroupBox();
             this.searchText = new System.Windows.Forms.TextBox();
             this.middleLeft = new System.Windows.Forms.Panel();
+            this.backBtn = new System.Windows.Forms.Button();
             this.detailsGroup = new System.Windows.Forms.GroupBox();
             this.shareholderDataSet = new System.Windows.Forms.DataGridView();
-            this.sNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.shareholderID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.shareName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.shareValue = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.currBalance = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gain = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.noOfShares = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.brokerID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.currBalanceTxt = new System.Windows.Forms.TextBox();
             this.shareNameL = new System.Windows.Forms.Label();
             this.shareholderIDL = new System.Windows.Forms.Label();
@@ -56,7 +49,13 @@ namespace SE_ManagementSystem
             this.shareNameCombo = new System.Windows.Forms.ComboBox();
             this.numberOfSharesL = new System.Windows.Forms.Label();
             this.numberOfSharesTxt = new System.Windows.Forms.TextBox();
-            this.backBtn = new System.Windows.Forms.Button();
+            this.sNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.shareholderID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.shareName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.shareValue = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.currBalance = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.noOfShares = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.brokerID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.left.SuspendLayout();
             this.topLeft.SuspendLayout();
             this.right.SuspendLayout();
@@ -218,6 +217,19 @@ namespace SE_ManagementSystem
             this.middleLeft.Size = new System.Drawing.Size(350, 70);
             this.middleLeft.TabIndex = 3;
             // 
+            // backBtn
+            // 
+            this.backBtn.BackgroundImage = global::SE_ManagementSystem.Properties.Resources._064_Back;
+            this.backBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.backBtn.FlatAppearance.BorderSize = 0;
+            this.backBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.backBtn.Location = new System.Drawing.Point(0, 2);
+            this.backBtn.Name = "backBtn";
+            this.backBtn.Size = new System.Drawing.Size(71, 67);
+            this.backBtn.TabIndex = 1;
+            this.backBtn.UseVisualStyleBackColor = true;
+            this.backBtn.Click += new System.EventHandler(this.backBtn_Click);
+            // 
             // detailsGroup
             // 
             this.detailsGroup.Controls.Add(this.shareholderDataSet);
@@ -243,7 +255,6 @@ namespace SE_ManagementSystem
             this.shareName,
             this.shareValue,
             this.currBalance,
-            this.gain,
             this.noOfShares,
             this.brokerID});
             this.shareholderDataSet.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -253,63 +264,6 @@ namespace SE_ManagementSystem
             this.shareholderDataSet.RowHeadersWidth = 51;
             this.shareholderDataSet.Size = new System.Drawing.Size(990, 479);
             this.shareholderDataSet.TabIndex = 3;
-            // 
-            // sNo
-            // 
-            this.sNo.HeaderText = "";
-            this.sNo.MinimumWidth = 6;
-            this.sNo.Name = "sNo";
-            this.sNo.ReadOnly = true;
-            this.sNo.Visible = false;
-            // 
-            // shareholderID
-            // 
-            this.shareholderID.HeaderText = "ID";
-            this.shareholderID.MinimumWidth = 6;
-            this.shareholderID.Name = "shareholderID";
-            this.shareholderID.ReadOnly = true;
-            // 
-            // shareName
-            // 
-            this.shareName.HeaderText = "Share Name";
-            this.shareName.MinimumWidth = 6;
-            this.shareName.Name = "shareName";
-            this.shareName.ReadOnly = true;
-            // 
-            // shareValue
-            // 
-            this.shareValue.HeaderText = "Value";
-            this.shareValue.MinimumWidth = 6;
-            this.shareValue.Name = "shareValue";
-            this.shareValue.ReadOnly = true;
-            // 
-            // currBalance
-            // 
-            this.currBalance.HeaderText = "Balance";
-            this.currBalance.MinimumWidth = 6;
-            this.currBalance.Name = "currBalance";
-            this.currBalance.ReadOnly = true;
-            // 
-            // gain
-            // 
-            this.gain.HeaderText = "Gains/Losses";
-            this.gain.MinimumWidth = 6;
-            this.gain.Name = "gain";
-            this.gain.ReadOnly = true;
-            // 
-            // noOfShares
-            // 
-            this.noOfShares.HeaderText = "Volume";
-            this.noOfShares.MinimumWidth = 6;
-            this.noOfShares.Name = "noOfShares";
-            this.noOfShares.ReadOnly = true;
-            // 
-            // brokerID
-            // 
-            this.brokerID.HeaderText = "Broker";
-            this.brokerID.MinimumWidth = 6;
-            this.brokerID.Name = "brokerID";
-            this.brokerID.ReadOnly = true;
             // 
             // currBalanceTxt
             // 
@@ -379,18 +333,55 @@ namespace SE_ManagementSystem
             this.numberOfSharesTxt.Size = new System.Drawing.Size(313, 30);
             this.numberOfSharesTxt.TabIndex = 39;
             // 
-            // backBtn
+            // sNo
             // 
-            this.backBtn.BackgroundImage = global::SE_ManagementSystem.Properties.Resources._064_Back;
-            this.backBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.backBtn.FlatAppearance.BorderSize = 0;
-            this.backBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.backBtn.Location = new System.Drawing.Point(0, 2);
-            this.backBtn.Name = "backBtn";
-            this.backBtn.Size = new System.Drawing.Size(71, 67);
-            this.backBtn.TabIndex = 1;
-            this.backBtn.UseVisualStyleBackColor = true;
-            this.backBtn.Click += new System.EventHandler(this.backBtn_Click);
+            this.sNo.HeaderText = "";
+            this.sNo.MinimumWidth = 6;
+            this.sNo.Name = "sNo";
+            this.sNo.ReadOnly = true;
+            this.sNo.Visible = false;
+            // 
+            // shareholderID
+            // 
+            this.shareholderID.HeaderText = "ID";
+            this.shareholderID.MinimumWidth = 6;
+            this.shareholderID.Name = "shareholderID";
+            this.shareholderID.ReadOnly = true;
+            // 
+            // shareName
+            // 
+            this.shareName.HeaderText = "Share Name";
+            this.shareName.MinimumWidth = 6;
+            this.shareName.Name = "shareName";
+            this.shareName.ReadOnly = true;
+            // 
+            // shareValue
+            // 
+            this.shareValue.HeaderText = "Value";
+            this.shareValue.MinimumWidth = 6;
+            this.shareValue.Name = "shareValue";
+            this.shareValue.ReadOnly = true;
+            // 
+            // currBalance
+            // 
+            this.currBalance.HeaderText = "Balance";
+            this.currBalance.MinimumWidth = 6;
+            this.currBalance.Name = "currBalance";
+            this.currBalance.ReadOnly = true;
+            // 
+            // noOfShares
+            // 
+            this.noOfShares.HeaderText = "Volume";
+            this.noOfShares.MinimumWidth = 6;
+            this.noOfShares.Name = "noOfShares";
+            this.noOfShares.ReadOnly = true;
+            // 
+            // brokerID
+            // 
+            this.brokerID.HeaderText = "Broker";
+            this.brokerID.MinimumWidth = 6;
+            this.brokerID.Name = "brokerID";
+            this.brokerID.ReadOnly = true;
             // 
             // AdminShareholderWin
             // 
@@ -428,14 +419,6 @@ namespace SE_ManagementSystem
         protected System.Windows.Forms.Button editBtn;
         private System.Windows.Forms.GroupBox detailsGroup;
         private System.Windows.Forms.DataGridView shareholderDataSet;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sNo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn shareholderID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn shareName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn shareValue;
-        private System.Windows.Forms.DataGridViewTextBoxColumn currBalance;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gain;
-        private System.Windows.Forms.DataGridViewTextBoxColumn noOfShares;
-        private System.Windows.Forms.DataGridViewTextBoxColumn brokerID;
         private System.Windows.Forms.TextBox currBalanceTxt;
         private System.Windows.Forms.Label shareNameL;
         private System.Windows.Forms.Label numberOfSharesL;
@@ -445,5 +428,12 @@ namespace SE_ManagementSystem
         private System.Windows.Forms.ComboBox shareIDCombo;
         private System.Windows.Forms.Label shareholderIDL;
         protected System.Windows.Forms.Button backBtn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sNo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn shareholderID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn shareName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn shareValue;
+        private System.Windows.Forms.DataGridViewTextBoxColumn currBalance;
+        private System.Windows.Forms.DataGridViewTextBoxColumn noOfShares;
+        private System.Windows.Forms.DataGridViewTextBoxColumn brokerID;
     }
 }

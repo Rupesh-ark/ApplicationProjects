@@ -16,6 +16,7 @@ create table StockOrder(orderID varchar(10) primary key,
   orderQuantity smallint not null,
   purchaseAmt money not null,
   borkerID varchar(10) foreign key references Brokers(brokerLoginID) on delete no action on update no action,
+  shareName varchar(10) foreign key references Shares(shareName) on delete no action on update no action,
   seName varchar(6) foreign key references StockExchange(seName) on delete cascade);
 
 create table Companies(companyID varchar(10) primary key,
@@ -33,11 +34,6 @@ create table Shares(shareName varchar(10) primary key,
   holdingsCost money not null,
   holdingsQuantity smallint not null
   );
-
-create table StockQuote(companyID varchar(10) foreign key references Companies(companyID) on delete cascade,
-  offer int not null,
-  bid int not null
-);
 
 
 create table Performance(companyID varchar(10) foreign key references Companies(companyID) on delete cascade,
@@ -57,8 +53,8 @@ create table Customers(customerID varchar(10) primary key,
 create table ShareHolders(shareholderID varchar(10) primary key references Customers(customerID) on delete cascade,
   shareName varchar(10) foreign key references Shares(shareName) on delete cascade,
   shareValue money not null,
-  gain money not null,
-  numberOfShares int not null
+  numberOfShares int not null,
+  borkerID varchar(10) foreign key references Brokers(brokerLoginID) on delete no action on update no action
 );
 
 create table custBalanceSheet(customerID varchar(10) foreign key references Customers(customerID) on delete cascade ,

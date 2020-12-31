@@ -22,16 +22,22 @@ namespace SE_ManagementSystem
             CentralControl.ShowAstrError(passwordText, passErr);
             CentralControl.ShowAstrError(usernameText, usernameErr);
             AdminHomeWin adminHomeWin = new AdminHomeWin();
+            CustHomeWin custHomeWin = new CustHomeWin();
             if(usernameErr.Visible|| passErr.Visible)
             {
                 CentralControl.ShowMSG("Fields with * cannot be left blank", "Error");
             }
             else
             {   
-                if(Retrival.IsValidUser(usernameText.Text,passwordText.Text) && (Retrival.AUTH == AuthLevel.AdminLevel))
+                if(Retrival.IsValidUser(usernameText.Text,passwordText.Text))  
                 {
-                    CentralControl.ShowWindow(adminHomeWin, this, MDI.ActiveForm);
+                    if (Retrival.AUTH == AuthLevel.AdminLevel)
+                        CentralControl.ShowWindow(adminHomeWin, this, MDI.ActiveForm);
+                    else if (Retrival.AUTH == AuthLevel.CustomerLevel)
+                        CentralControl.ShowWindow(custHomeWin, this, MDI.ActiveForm);
                 }
+               
+
             }
         }
 

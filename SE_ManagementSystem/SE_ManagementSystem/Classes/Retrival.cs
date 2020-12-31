@@ -8,14 +8,25 @@ namespace SE_ManagementSystem
     internal class Retrival
     {
         private static AuthLevel auth = AuthLevel.None;
-
+        private static string loginID;
+        public static string LOGINID
+        {
+            get
+            {
+                return loginID;
+            }
+            private set
+            {
+                loginID = value;
+            }
+        }
         public static AuthLevel AUTH
         {
             get
             {
                 return auth;
             }
-            set
+            private set
             {
                 auth = value;
             }
@@ -138,6 +149,88 @@ namespace SE_ManagementSystem
                 CentralControl.ShowMSG(ex.Message, "Error");
             }
         }
+        public static void LoadItems(string proc, ComboBox comboBox, string displayMember,string stParam,string paramToSupply, string valueMember)
+        {
+            try
+            {
+                SqlCommand cmd = new SqlCommand(proc, CentralControl.con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue(stParam, paramToSupply);
+                CentralControl.con.Open();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                comboBox.DisplayMember = displayMember;
+                comboBox.ValueMember = valueMember;
+                comboBox.DataSource = dt;
+                CentralControl.con.Close();
+            }
+            catch (Exception ex)
+            {
+                CentralControl.ShowMSG(ex.Message, "Error");
+                CentralControl.con.Close();
+            }
+        }
+
+
+        public static void LoadItem(Label label,string proc,string stParam,string paramToSupply,string columnName)
+        {
+            try
+            {
+                SqlCommand cmd = new SqlCommand(proc, CentralControl.con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue(stParam, paramToSupply);
+                CentralControl.con.Open();
+                SqlDataReader dr = cmd.ExecuteReader();
+                if(dr.HasRows)
+                {
+                    while(dr.Read())
+                    {
+                        label.Text = dr[columnName].ToString();
+                    }
+                }
+
+
+                CentralControl.con.Close();
+            }
+            catch (Exception ex)
+            {
+                CentralControl.ShowMSG(ex.Message, "Error");
+                CentralControl.con.Close();
+            }
+
+
+        }
+
+        public static void LoadItem(string st, string proc, string stParam, string paramToSupply, string columnName)
+        {
+            try
+            {
+                SqlCommand cmd = new SqlCommand(proc, CentralControl.con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue(stParam, paramToSupply);
+                CentralControl.con.Open();
+                SqlDataReader dr = cmd.ExecuteReader();
+                if (dr.HasRows)
+                {
+                    while (dr.Read())
+                    {
+                        st = dr[columnName].ToString();
+                    }
+                }
+
+
+                CentralControl.con.Close();
+            }
+            catch (Exception ex)
+            {
+                CentralControl.ShowMSG(ex.Message, "Error");
+                CentralControl.con.Close();
+            }
+
+
+        }
+
 
         public static bool IsValidUser(string user, string pass)
         {
@@ -150,6 +243,7 @@ namespace SE_ManagementSystem
                 cmd.Parameters.AddWithValue("password", pass);
                 CentralControl.con.Open();
                 SqlDataReader dr = cmd.ExecuteReader();
+                
                 if (dr.HasRows)
                 {
                     while (dr.Read())
@@ -157,6 +251,7 @@ namespace SE_ManagementSystem
                         if (user == dr["ID"].ToString() && pass == dr["password"].ToString())
                         {
                             AUTH = (AuthLevel)Convert.ToInt32((dr["AuthLevel"].ToString()));
+                            LOGINID = dr["ID"].ToString();
                             status = true;
                         }
                         else
@@ -168,11 +263,13 @@ namespace SE_ManagementSystem
                     CentralControl.ShowMSG("Invalid username & password", "Error");
                     status = false;
                 }
+
                 CentralControl.con.Close();
             }
             catch (Exception ex)
             {
                 CentralControl.ShowMSG(ex.Message, "Error");
+                CentralControl.con.Close();
             }
             return status;
         }

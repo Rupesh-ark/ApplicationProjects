@@ -1,5 +1,5 @@
 ﻿
-namespace SE_ManagementSystem.Customer
+namespace SE_ManagementSystem
 {
     partial class CustStockWin
     {

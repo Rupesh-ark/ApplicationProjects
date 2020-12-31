@@ -1,5 +1,5 @@
 ﻿
-namespace SE_ManagementSystem.Customer
+namespace SE_ManagementSystem
 {
     partial class CustHomeWin
     {
@@ -29,142 +29,100 @@ namespace SE_ManagementSystem.Customer
         /// </summary>
         private void InitializeComponent()
         {
-            this.pfpL = new System.Windows.Forms.Label();
-            this.stocksL = new System.Windows.Forms.Label();
             this.order = new System.Windows.Forms.Button();
-            this.stocksBtn = new System.Windows.Forms.Button();
             this.profileBtn = new System.Windows.Forms.Button();
-            this.orderL = new System.Windows.Forms.Label();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.left.SuspendLayout();
             this.topLeft.SuspendLayout();
             this.right.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // left
             // 
             this.left.BackgroundImage = global::SE_ManagementSystem.Properties.Resources.unnamed;
-            this.left.Size = new System.Drawing.Size(350, 642);
+            this.left.Size = new System.Drawing.Size(350, 1033);
             // 
             // right
             // 
             this.right.BackgroundImage = global::SE_ManagementSystem.Properties.Resources.unnamed;
-            this.right.Controls.Add(this.orderL);
-            this.right.Controls.Add(this.order);
-            this.right.Controls.Add(this.stocksL);
-            this.right.Controls.Add(this.pfpL);
-            this.right.Controls.Add(this.stocksBtn);
-            this.right.Controls.Add(this.profileBtn);
-            this.right.Size = new System.Drawing.Size(924, 642);
-            this.right.Controls.SetChildIndex(this.profileBtn, 0);
-            this.right.Controls.SetChildIndex(this.stocksBtn, 0);
+            this.right.Controls.Add(this.tableLayoutPanel1);
+            this.right.Size = new System.Drawing.Size(1552, 1033);
             this.right.Controls.SetChildIndex(this.topRight, 0);
-            this.right.Controls.SetChildIndex(this.pfpL, 0);
-            this.right.Controls.SetChildIndex(this.stocksL, 0);
-            this.right.Controls.SetChildIndex(this.order, 0);
-            this.right.Controls.SetChildIndex(this.orderL, 0);
+            this.right.Controls.SetChildIndex(this.tableLayoutPanel1, 0);
             // 
             // topRight
             // 
             this.topRight.BackgroundImage = global::SE_ManagementSystem.Properties.Resources.unnamed;
-            this.topRight.Size = new System.Drawing.Size(924, 72);
+            this.topRight.Size = new System.Drawing.Size(1552, 72);
             // 
             // welcomeText
             // 
             this.welcomeText.Image = global::SE_ManagementSystem.Properties.Resources.unnamed;
             // 
-            // pfpL
-            // 
-            this.pfpL.AutoSize = true;
-            this.pfpL.Font = new System.Drawing.Font("Montserrat", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pfpL.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.pfpL.Location = new System.Drawing.Point(405, 510);
-            this.pfpL.Name = "pfpL";
-            this.pfpL.Size = new System.Drawing.Size(109, 39);
-            this.pfpL.TabIndex = 3;
-            this.pfpL.Text = "Profile";
-            // 
-            // stocksL
-            // 
-            this.stocksL.AutoSize = true;
-            this.stocksL.Font = new System.Drawing.Font("Montserrat", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.stocksL.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.stocksL.Location = new System.Drawing.Point(108, 510);
-            this.stocksL.Name = "stocksL";
-            this.stocksL.Size = new System.Drawing.Size(109, 39);
-            this.stocksL.TabIndex = 4;
-            this.stocksL.Text = "Stocks";
-            // 
             // order
             // 
-            this.order.BackgroundImage = global::SE_ManagementSystem.Properties.Resources.kisspng_computer_icons_scalable_vector_graphics_portable_n_5c18b6ce2017d12;
             this.order.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.order.Dock = System.Windows.Forms.DockStyle.Fill;
             this.order.FlatAppearance.BorderSize = 0;
             this.order.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.order.Location = new System.Drawing.Point(624, 228);
+            this.order.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.order.Location = new System.Drawing.Point(3, 3);
             this.order.Name = "order";
-            this.order.Size = new System.Drawing.Size(288, 258);
+            this.order.Size = new System.Drawing.Size(770, 955);
             this.order.TabIndex = 5;
+            this.order.Text = "Order";
             this.order.UseVisualStyleBackColor = true;
             this.order.Click += new System.EventHandler(this.order_Click);
             // 
-            // stocksBtn
-            // 
-            this.stocksBtn.BackgroundImage = global::SE_ManagementSystem.Properties.Resources._21_5121;
-            this.stocksBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.stocksBtn.FlatAppearance.BorderSize = 0;
-            this.stocksBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.stocksBtn.Location = new System.Drawing.Point(20, 236);
-            this.stocksBtn.Name = "stocksBtn";
-            this.stocksBtn.Size = new System.Drawing.Size(288, 250);
-            this.stocksBtn.TabIndex = 2;
-            this.stocksBtn.UseVisualStyleBackColor = true;
-            this.stocksBtn.Click += new System.EventHandler(this.stocksBtn_Click);
-            // 
             // profileBtn
             // 
-            this.profileBtn.BackgroundImage = global::SE_ManagementSystem.Properties.Resources.general_pack_NEW_glyph_profile_512;
             this.profileBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.profileBtn.Dock = System.Windows.Forms.DockStyle.Fill;
             this.profileBtn.FlatAppearance.BorderSize = 0;
             this.profileBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.profileBtn.Location = new System.Drawing.Point(332, 236);
+            this.profileBtn.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.profileBtn.Location = new System.Drawing.Point(779, 3);
             this.profileBtn.Name = "profileBtn";
-            this.profileBtn.Size = new System.Drawing.Size(250, 250);
+            this.profileBtn.Size = new System.Drawing.Size(770, 955);
             this.profileBtn.TabIndex = 1;
+            this.profileBtn.Text = "Profile";
             this.profileBtn.UseVisualStyleBackColor = true;
             this.profileBtn.Click += new System.EventHandler(this.profileBtn_Click);
             // 
-            // orderL
+            // tableLayoutPanel1
             // 
-            this.orderL.AutoSize = true;
-            this.orderL.Font = new System.Drawing.Font("Montserrat", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.orderL.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.orderL.Location = new System.Drawing.Point(680, 510);
-            this.orderL.Name = "orderL";
-            this.orderL.Size = new System.Drawing.Size(98, 39);
-            this.orderL.TabIndex = 6;
-            this.orderL.Text = "Order";
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.Controls.Add(this.order, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.profileBtn, 1, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 72);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1552, 961);
+            this.tableLayoutPanel1.TabIndex = 7;
             // 
             // CustHomeWin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1274, 642);
+            this.ClientSize = new System.Drawing.Size(1902, 1033);
             this.Name = "CustHomeWin";
             this.Text = "CustHomeWin";
             this.left.ResumeLayout(false);
             this.topLeft.ResumeLayout(false);
             this.right.ResumeLayout(false);
-            this.right.PerformLayout();
+            this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.Button stocksBtn;
         private System.Windows.Forms.Button profileBtn;
-        private System.Windows.Forms.Label stocksL;
-        private System.Windows.Forms.Label pfpL;
         private System.Windows.Forms.Button order;
-        private System.Windows.Forms.Label orderL;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
     }
 }

@@ -36,19 +36,16 @@ namespace SE_ManagementSystem
             this.login = new System.Windows.Forms.Button();
             this.usernameErr = new System.Windows.Forms.Label();
             this.passErr = new System.Windows.Forms.Label();
-            this.bottomLogo = new System.Windows.Forms.PictureBox();
             this.users = new System.Windows.Forms.PictureBox();
             this.left.SuspendLayout();
             this.topLeft.SuspendLayout();
             this.right.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bottomLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.users)).BeginInit();
             this.SuspendLayout();
             // 
             // left
             // 
             this.left.Controls.Add(this.login);
-            this.left.Controls.Add(this.bottomLogo);
             this.left.Controls.Add(this.users);
             this.left.Controls.Add(this.passwordText);
             this.left.Controls.Add(this.passwordL);
@@ -65,7 +62,6 @@ namespace SE_ManagementSystem
             this.left.Controls.SetChildIndex(this.passwordL, 0);
             this.left.Controls.SetChildIndex(this.passwordText, 0);
             this.left.Controls.SetChildIndex(this.users, 0);
-            this.left.Controls.SetChildIndex(this.bottomLogo, 0);
             this.left.Controls.SetChildIndex(this.login, 0);
             // 
             // right
@@ -150,17 +146,6 @@ namespace SE_ManagementSystem
             this.passErr.Text = "*";
             this.passErr.Visible = false;
             // 
-            // bottomLogo
-            // 
-            this.bottomLogo.BackgroundImage = global::SE_ManagementSystem.Properties.Resources.unnamed;
-            this.bottomLogo.Image = global::SE_ManagementSystem.Properties.Resources._092_network;
-            this.bottomLogo.Location = new System.Drawing.Point(0, 478);
-            this.bottomLogo.Name = "bottomLogo";
-            this.bottomLogo.Size = new System.Drawing.Size(350, 350);
-            this.bottomLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.bottomLogo.TabIndex = 9;
-            this.bottomLogo.TabStop = false;
-            // 
             // users
             // 
             this.users.BackgroundImage = global::SE_ManagementSystem.Properties.Resources.unnamed;
@@ -184,7 +169,6 @@ namespace SE_ManagementSystem
             this.left.PerformLayout();
             this.topLeft.ResumeLayout(false);
             this.right.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.bottomLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.users)).EndInit();
             this.ResumeLayout(false);
 
@@ -200,6 +184,5 @@ namespace SE_ManagementSystem
         private System.Windows.Forms.Label passErr;
         private System.Windows.Forms.Label usernameErr;
         private System.Windows.Forms.PictureBox users;
-        private System.Windows.Forms.PictureBox bottomLogo;
     }
 }

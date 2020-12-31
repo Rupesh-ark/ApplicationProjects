@@ -90,7 +90,7 @@ namespace SE_ManagementSystem
 
             try
             {
-                SqlCommand cmd = new SqlCommand("spUpdateShares", CentralControl.con);
+                SqlCommand cmd = new SqlCommand("spUpdateShare", CentralControl.con);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@shareName", shareName);
                 cmd.Parameters.AddWithValue("@companyID", companyID);
@@ -112,6 +112,78 @@ namespace SE_ManagementSystem
                 CentralControl.ShowMSG(ex.Message, "Error");
             }
         }
+        public static void UpdateSharesHoldingQuantity(string shareName, Int16 holdingsQuantity)
+        {
+
+            try
+            {
+                SqlCommand cmd = new SqlCommand("spUpdateShareHoldingQuantity", CentralControl.con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@shareName", shareName);
+                cmd.Parameters.AddWithValue("@holdingsQuantity", holdingsQuantity);
+                CentralControl.con.Open();
+                int res = cmd.ExecuteNonQuery();
+                CentralControl.con.Close();
+                if (res > 0)
+                {
+                    CentralControl.ShowMSG(shareName + " updated sucessfully into the system", "Success");
+                }
+            }
+            catch (Exception ex)
+            {
+                CentralControl.con.Close();
+                CentralControl.ShowMSG(ex.Message, "Error");
+            }
+        }
+        public static void UpdateBalance(string customerID, Int32 balance)
+        {
+
+            try
+            {
+                SqlCommand cmd = new SqlCommand("spUpdateCustBalanceSheet_updateBalance", CentralControl.con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@customerID", customerID);
+                cmd.Parameters.AddWithValue("@balance", balance);
+                CentralControl.con.Open();
+                int res = cmd.ExecuteNonQuery();
+                CentralControl.con.Close();
+                if (res > 0)
+                {
+                    CentralControl.ShowMSG(customerID + " updated sucessfully into the system", "Success");
+                }
+            }
+            catch (Exception ex)
+            {
+                CentralControl.con.Close();
+                CentralControl.ShowMSG(ex.Message, "Error");
+            }
+        }
+
+        public static void UpdateCustNameNum(string customerID, string name, string number)
+        {
+
+            try
+            {
+                SqlCommand cmd = new SqlCommand("spUpdateCustomersNameNum", CentralControl.con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@customerID", customerID);
+                cmd.Parameters.AddWithValue("@customerName", name);
+                cmd.Parameters.AddWithValue("@customerNum", number);
+                CentralControl.con.Open();
+                int res = cmd.ExecuteNonQuery();
+                CentralControl.con.Close();
+                if (res > 0)
+                {
+                    CentralControl.ShowMSG(customerID + " updated sucessfully into the system", "Success");
+                }
+            }
+            catch (Exception ex)
+            {
+                CentralControl.con.Close();
+                CentralControl.ShowMSG(ex.Message, "Error");
+            }
+        }
+
 
     }
 }

@@ -175,6 +175,9 @@
     <EmbeddedResource Include="Customer\CustHomeWin.resx">
       <DependentUpon>CustHomeWin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Customer\CustOrderWindow.resx">
+      <DependentUpon>CustOrderWindow.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Customer\CustPfpWin.resx">
       <DependentUpon>CustPfpWin.cs</DependentUpon>
     </EmbeddedResource>
@@ -278,6 +281,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\7197611.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wp6795530.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

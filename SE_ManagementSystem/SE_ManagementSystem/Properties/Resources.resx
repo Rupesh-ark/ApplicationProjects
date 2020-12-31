@@ -121,9 +121,6 @@
   <data name="144-television" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assests\icons\144-television.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="unnamed" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\unnamed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="367-user" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assests\icons\367-user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -133,8 +130,11 @@
   <data name="370-locked" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assests\icons\370-locked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="general_pack_NEW_glyph_profile-512" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\general_pack_NEW_glyph_profile-512.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="unnamed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\unnamed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="7197611" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\7197611.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="367-user1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\367-user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -148,11 +148,14 @@
   <data name="21-5121" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\21-5121.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="366-user" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\366-user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="LoginBack2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assests\backgrounds\LoginBack2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="general_pack_NEW_glyph_profile-512" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\general_pack_NEW_glyph_profile-512.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="155-id card" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assests\icons\155-id card.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="kisspng-computer-icons-scalable-vector-graphics-portable-n-5c18b6ce2017d12" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\kisspng-computer-icons-scalable-vector-graphics-portable-n-5c18b6ce2017d1.03595049154512353413151.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -160,8 +163,8 @@
   <data name="21-512" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\21-512.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="155-id card" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\assests\icons\155-id card.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="366-user" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\366-user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="357-home" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\357-home.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -178,7 +181,7 @@
   <data name="kisspng-computer-icons-scalable-vector-graphics-portable-n-5c18b6ce2017d1.0359504915451235341315" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\kisspng-computer-icons-scalable-vector-graphics-portable-n-5c18b6ce2017d1.0359504915451235341315.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="7197611" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\7197611.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="wp6795530" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wp6795530.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

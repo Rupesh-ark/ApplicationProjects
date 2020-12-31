@@ -116,6 +116,53 @@ namespace SE_ManagementSystem
             }
         }
 
+        public static void InsertShareholder(string ID, string Name, Int32 shareValue, Int32 numberOfShares, string brokerID)
+        {
+            try
+            {
+                SqlCommand cmd = new SqlCommand("spInsertShareHolders", CentralControl.con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@ID", ID);
+                cmd.Parameters.AddWithValue("@shareName", Name);
+                cmd.Parameters.AddWithValue("@shareValue", shareValue);
+                cmd.Parameters.AddWithValue("@numberOfShares", numberOfShares);
+                cmd.Parameters.AddWithValue("@brokerID", brokerID);
+                CentralControl.con.Open();
+                int res = cmd.ExecuteNonQuery();
+                CentralControl.con.Close();
+                if (res > 0)
+                {
+                    CentralControl.ShowMSG(ID + " added sucessfully into the system", "Success");
+                }
+            }
+            catch (Exception ex)
+            {
+                CentralControl.con.Close();
+                CentralControl.ShowMSG(ex.Message, "Error");
+            }
+        }
 
+        public static void InsertMaster(string ID, Int32 money)
+        {
+            try
+            {
+                SqlCommand cmd = new SqlCommand("spInsertShares", CentralControl.con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@transactionID", ID);
+                cmd.Parameters.AddWithValue("@amount", money);
+                CentralControl.con.Open();
+                int res = cmd.ExecuteNonQuery();
+                CentralControl.con.Close();
+                if (res > 0)
+                {
+                   // CentralControl.ShowMSG(shareName + " added sucessfully into the system", "Success");
+                }
+            }
+            catch (Exception ex)
+            {
+                CentralControl.con.Close();
+                CentralControl.ShowMSG(ex.Message, "Error");
+            }
+        }
     }
 }

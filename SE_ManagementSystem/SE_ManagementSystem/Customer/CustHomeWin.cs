@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SE_ManagementSystem.Customer
+namespace SE_ManagementSystem
 {
     public partial class CustHomeWin : SampleForm
     {
